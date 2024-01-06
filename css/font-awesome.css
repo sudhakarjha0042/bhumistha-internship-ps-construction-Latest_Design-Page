@@ -243,7 +243,7 @@
 .fa-trash-o:before {
   content: "\f014";
 }
-.fa-home:before {
+.fa-DESIGN:before {
   content: "\f015";
 }
 .fa-file-o:before {
@@ -813,7 +813,7 @@
   content: "\f0e3";
 }
 .fa-dashboard:before,
-.fa-tachometer:before {
+.fa-tacDESIGNter:before {
   content: "\f0e4";
 }
 .fa-comment-o:before {

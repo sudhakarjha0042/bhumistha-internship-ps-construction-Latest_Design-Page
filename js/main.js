@@ -147,7 +147,7 @@ $('.project__menu button').on('click', function(event) {
 
 
 /*-----------------------------------------------
-  15. Home Slider
+  15. DESIGN Slider
 -------------------------------------------------*/
 
   if ($('.slider__activation__wrap').length) {
