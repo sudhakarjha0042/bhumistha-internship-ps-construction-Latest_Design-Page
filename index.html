@@ -1115,6 +1115,17 @@
     <script src="js/waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('.owl-carousel').owlCarousel({
+            items: 1, // Number of items to be displayed at a time
+            loop: true, // Enable loop
+            autoplay: true, // Enable autoplay
+            autoplayTimeout: 5000, // Autoplay interval in milliseconds (adjust as needed)
+            autoplayHoverPause: true, // Pause autoplay on hover
+          });
+        });
+      </script>
 
 </body>
 
