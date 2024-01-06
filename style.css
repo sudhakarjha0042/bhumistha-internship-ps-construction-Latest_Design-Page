@@ -524,6 +524,7 @@ About 2
 }
 .htc__btn--transparent {
     border: 1px solid #fff;
+    border-radius: 3px;
     display: inline-block;
     font-family: Raleway;
     font-size: 18px;
@@ -1173,6 +1174,7 @@ About 2
 }
 .htc__bst__btn .htc__btn {
     padding: 0 36px;
+    border-radius: 3px;
 }
 
 /*---------------------------------------

@@ -157,9 +157,9 @@ $('.project__menu button').on('click', function(event) {
       nav:true,
       autoplay: true,
       navText: [ '<i class="zmdi zmdi-chevron-left"></i>', '<i class="zmdi zmdi-chevron-right"></i>' ],
-      autoplayTimeout: 2000,
+      autoplayTimeout: 3000,
       items:1,
-      dots: false,
+      dots: true,
       lazyLoad: true,
       responsive:{
         0:{
