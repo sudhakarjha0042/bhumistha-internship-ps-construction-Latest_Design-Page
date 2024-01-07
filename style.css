@@ -452,6 +452,7 @@ About 2
     transition: all 0.5s ease 0s;
     width: 100%;
     z-index: 1;
+    
 }
 .project__action {
     position: absolute;
@@ -494,6 +495,7 @@ About 2
 .project:hover .project__hover__info,
 .project__itm:hover .project__hover__info {
     opacity: 1;
+    transform: rotateY(360deg);
 }
 
 .project__thumb a {
