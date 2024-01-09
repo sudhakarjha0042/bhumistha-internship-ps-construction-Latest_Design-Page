@@ -351,11 +351,11 @@ body {
 ----------------------------*/
 
  .bg--1 {
-  background: rgba(0, 0, 0, 0) url("../../images/bg/1.jpg") no-repeat fixed 0 0 / cover ;
+  background: rgba(0, 0, 0, 0) url("/static/construction/images/bg/1.jpg") no-repeat fixed 0 0 / cover ;
 }
 
  .bg--1 {
-  background: rgba(0, 0, 0, 0) url("../../images/others/2.png") no-repeat scroll 0 0 / cover ;
+  background: rgba(0, 0, 0, 0) url("/static/construction/images/others/2.png") no-repeat scroll 0 0 / cover ;
 }
 
 
@@ -642,7 +642,7 @@ textarea:focus {
 .pt--100 { padding-top: 100px }
 .pt--110 { padding-top: 110px }
 .pt--120 { padding-top: 120px }
-.pt--130 { padding-top: 130px }-
+.pt--130 { padding-top: 130px }
 .pt--140 { padding-top: 140px }
 .pt--150 { padding-top: 150px }
 
@@ -790,7 +790,7 @@ input::-moz-placeholder {
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
-  background: rgba(0, 0, 0, 0) url("../../images/icons/select-option.png") no-repeat scroll 90% 21px / 10px 6px;
+  background: rgba(0, 0, 0, 0) url("/static/construction/images/icons/select-option.png") no-repeat scroll 90% 21px / 10px 6px;
 }
 
 input [type="text"]:focus, 

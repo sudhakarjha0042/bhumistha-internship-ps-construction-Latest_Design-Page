@@ -1,39 +1,36 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
-
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home-2 || Simply Construction HTML5 Template</title>
+    <title>Simply Construction || HTML5 Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'construction/images/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'construction/apple-touch-icon.png' %}">
 
     <!-- All css files are included here. -->
-    <!-- Bootstrap fremwork main css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Owl Carousel  main css -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <!-- This core.css file contents all plugings css file. -->
-    <link rel="stylesheet" href="css/core.css">
+    <!-- Bootstrap framework main css -->
+    <link rel="stylesheet" href="{% static 'construction/css/bootstrap.min.css' %}">
+    <!-- Owl Carousel main css -->
+    <link rel="stylesheet" href="{% static 'construction/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'construction/css/owl.theme.default.min.css' %}">
+    <!-- This core.css file contains all plugins css files. -->
+    <link rel="stylesheet" href="{% static 'construction/css/core.css' %}">
     <!-- Theme shortcodes/elements style -->
-    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="{% static 'construction/css/shortcode/shortcodes.css' %}">
     <!-- Theme main style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'construction/css/style.css' %}">
     <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{% static 'construction/css/responsive.css' %}">
     <!-- User style -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{% static 'construction/css/custom.css' %}">
 
 
-    <!-- Modernizr JS -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -78,52 +75,27 @@
                         <div class="col-md-2 col-sm-6 col-xs-7">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="images/logo/sinply-construction.png" alt="logo image">
+                                    <img src="{% static 'construction/images/logo/sinply-construction.png' %}" alt="logo image">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-8 col-sm-6 col-xs-5">
                             <nav class="main__menu__nav  hidden-xs hidden-sm">
                                 <ul class="main__menu">
-                                    <li class="drop"><a href="index.html">HOME</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Home 01</a></li>
-                                            <li><a href="index-2.html">Home 02</a></li>
-                                            <li><a href="index-3.html">Home 03</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="index.html">HOME</a></li>
                                     <li><a href="about.html">ABOUT</a></li>
                                     <li><a href="service.html">SERVICES</a></li>
-                                    <li class="drop"><a href="#">pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="service.html">service</a></li>
-                                            <li><a href="single-service.html">Single service</a></li>
-                                            <li><a href="projects-one.html">projects one</a></li>
-                                            <li><a href="projects-two.html">projects two</a></li>
-                                            <li><a href="projects-three.html">projects three</a></li>
-                                            <li><a href="single-project.html">Single Project</a></li>
-                                            <li><a href="blog.html">BLog</a></li>
-                                            <li><a href="blog-one-column.html">blog one column</a></li>
-                                            <li><a href="blog-two-column.html">blog two column</a></li>
-                                            <li><a href="blog-details.html">blog Details</a></li>
-                                            <li><a href="login-register.html">Log in & Register</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="gallery.html">GALLERY</a></li>
                                     <li class="drop"><a href="#">PROJECTS</a>
                                         <ul class="dropdown">
-                                            <li><a href="projects-one.html">projects one</a></li>
-                                            <li><a href="projects-two.html">projects two</a></li>
-                                            <li><a href="projects-three.html">projects three</a></li>
+                                            <li><a href="projects-one.html">Completed</a></li>
+                                            <li><a href="projects-two.html">Ongoing</a></li>
+                                            <li><a href="projects-three.html">Upcoming</a></li>
                                         </ul>
                                     </li>
-                                    <li class="drop"><a href="blog.html">BLOG</a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog.html">BLog</a></li>
-                                            <li><a href="blog-one-column.html">blog one column</a></li>
-                                            <li><a href="blog-two-column.html">blog two column</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="blog.html">BLOG</a></li>
                                     <li><a href="contact.html">CONTACT</a></li>
+                                    <li><a href="#">Emi Calculator</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
@@ -188,7 +160,7 @@
         <div class="slider__container">
             <div class="slider__activation__wrap owl-carousel owl-theme">
                 <!-- Start Single Slide -->
-                <div class="slide slider__fixed--height slide__align--center" data--black__overlay="6"  style="background: rgba(0, 0, 0, 0) url(images/slider/bg/1.jpg) no-repeat scroll 0 0 / cover;">
+                <div class="slide slider__fixed--height slide__align--center" style="background: rgba(0, 0, 0, 0) url('/static/construction/images/slider/bg/1.jpg') no-repeat scroll 0 0 / cover;" data--black__overlay="6">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
@@ -203,10 +175,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="htc__slider__fornt__img">
+                        <img src="{% static 'construction/images/slider/fornt-img/1.png' %}" alt="slider images">
+                    </div>
                 </div>
                 <!-- End Single Slide -->
                 <!-- Start Single Slide -->
-                <div class="slide slider__fixed--height slide__align--center" data--black__overlay="6"  style="background: rgba(0, 0, 0, 0) url(images/slider/bg/2.jpg) no-repeat scroll 0 0 / cover;">
+                <div class="slide slider__fixed--height slide__align--center" style="background: rgba(0, 0, 0, 0) url('/static/construction/images/slider/bg/2.jpg') no-repeat scroll 0 0 / cover;" data--black__overlay="6">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
@@ -220,18 +195,73 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="htc__slider__fornt__img">
+                        <img src="{% static 'construction/images/slider/fornt-img/1.png' %}" alt="slider images">
                     </div>
                 </div>
                 <!-- End Single Slide -->
             </div>
         </div>
         <!-- Start Slider Area -->
-        <!-- Start About Area -->
-        <section class="htc__about__area ptb--150 bg__white">
+        <!-- Start Offer Area -->
+        <section class="htc__offer__area htc__offer--2 pb--120 bg__gray">
             <div class="container">
                 <div class="row">
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                        <div class="offer">
+                            <div class="offer__icon">
+                                <img src="{% static 'construction/images/others/icon-2/1.png' %}" alt="icon images">
+                            </div>
+                            <div class="offer__details">
+                                <h2><a href="#">TOP RATED</a></h2>
+                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled demoralized</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 xmt-40">
+                        <div class="offer separator">
+                            <div class="offer__icon">
+                                <img src="{% static 'construction/images/others/icon-2/2.png' %}" alt="icon images">
+                            </div>
+                            <div class="offer__details">
+                                <h2><a href="#">BEST QUALITY</a></h2>
+                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled demoralized</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 hidden-sm col-xs-12 xmt-40">
+                        <div class="offer separator">
+                            <div class="offer__icon">
+                                <img src="{% static 'construction/images/others/icon-2/3.png' %}" alt="icon images">
+                            </div>
+                            <div class="offer__details">
+                                <h2><a href="#">LOW COST</a></h2>
+                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled demoralized</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h1__offer__image">
+                <img src="{% static 'construction/others/3.png' %}" alt="">
+            </div>
+        </section>
+        <!-- End Offer Area -->
+        <!-- Start About Area -->
+        <section class="htc__about__area about--2 text__pos ptb--150 bg__white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section__title text-center">
+                            <h2 class="title__line">ABOUT <span class="text--theme">SIMPLY</span></h2>
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--70">
                     <div class="col-md-4 col-lg-3 col-lg-offset-1 col-sm-6 col-xs-12">
-                        <div class="about foo xmt__40">
+                        <div class="about foo">
                             <div class="about__inner">
                                 <h2><a href="about.html">OUR STORY</a></h2>
                                 <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled demoralized On the other hand, we denounce with</p>
@@ -239,7 +269,7 @@
                                     <a href="about.html">READ MORE</a>
                                 </div>
                                 <div class="about__icon">
-                                    <img src="images/others/icon/1.png" alt="icon images">
+                                    <img src="{% static 'construction/images/others/icon/1.png' %}" alt="icon images">
                                 </div>
                             </div>
                             <div class="about__inner about__hober__info">
@@ -249,7 +279,7 @@
                                     <a href="about.html">READ MORE</a>
                                 </div>
                                 <div class="about__icon">
-                                    <img src="images/others/icon/1.png" alt="icon images">
+                                    <img src="{% static 'construction/images/others/icon/1.png' %}" alt="icon images">
                                 </div>
                             </div>
                         </div>
@@ -263,7 +293,7 @@
                                     <a href="about.html">READ MORE</a>
                                 </div>
                                 <div class="about__icon">
-                                    <img src="images/others/icon/2.png" alt="icon images">
+                                    <img src="{% static 'construction/images/others/icon/2.png' %}" alt="icon images">
                                 </div>
                             </div>
                             <div class="about__inner about__hober__info active">
@@ -273,7 +303,7 @@
                                     <a href="about.html">READ MORE</a>
                                 </div>
                                 <div class="about__icon">
-                                    <img src="images/others/icon/2.png" alt="icon images">
+                                    <img src="{% static 'construction/images/others/icon/1.png' %}" alt="icon images">
                                 </div>
                             </div>
                         </div>
@@ -287,7 +317,7 @@
                                     <a href="about.html">READ MORE</a>
                                 </div>
                                 <div class="about__icon">
-                                    <img src="images/others/icon/3.png" alt="icon images">
+                                    <img src="{% static 'construction/images/others/icon/3.png' %}" alt="icon images">
                                 </div>
                             </div>
                             <div class="about__inner about__hober__info">
@@ -297,8 +327,97 @@
                                     <a href="about.html">READ MORE</a>
                                 </div>
                                 <div class="about__icon">
-                                    <img src="images/others/icon/3.png" alt="icon images">
+                                    <img src="{% static 'construction/images/others/icon/3.png' %}" alt="icon images">
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text__shape">
+                <h2>SIMPLY</h2>
+            </div>
+        </section>
+        <!-- End About Area -->
+        <!-- start About Area -->
+        <section class="htc__service__area service--2 bg__gray">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="service__section__wrap clearfix">
+                        <!-- Start Single Service -->
+                        <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
+                            <div class="service__thumb">
+                                <img src="{% static 'construction/images/about/2.jpg' %}" alt="about image">
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+                        <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12 h1__service pt--40 pb--30">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="section__title text-left">
+                                        <h2 class="title__line">OUR <span class="text--theme">SERVICES</span></h2>
+                                        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- Start Single Service -->
+                                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="service">
+                                        <div class="service__thumb">
+                                            <a href="single-service.html">
+                                                <img src="{% static 'construction/images/service/1.jpg' %}" alt="service images">
+                                            </a>
+                                            <div class="service__hover">
+                                                <div class="service__action">
+                                                    <a href="single-service.html">DETAILS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service__details">
+                                            <h2><a href="single-service.html">CONSTRUCTION</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="service">
+                                        <div class="service__thumb">
+                                            <a href="single-service.html">
+                                                <img src="{% static 'construction/images/service/2.jpg' %}" alt="service images">
+                                            </a>
+                                            <div class="service__hover">
+                                                <div class="service__action">
+                                                    <a href="single-service.html">DETAILS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service__details">
+                                            <h2><a href="single-service.html">RENOVATION</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="service">
+                                        <div class="service__thumb">
+                                            <a href="single-service.html">
+                                                <img src="{% static 'construction/images/service/3.jpg' %}" alt="service images">
+                                            </a>
+                                            <div class="service__hover">
+                                                <div class="service__action">
+                                                    <a href="single-service.html">DETAILS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service__details">
+                                            <h2><a href="single-service.html">ARCHITECTURE</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
                             </div>
                         </div>
                     </div>
@@ -306,144 +425,9 @@
             </div>
         </section>
         <!-- End About Area -->
-        <!-- Start Service Area -->
-        <section class="htc__service__area bg__gray ptb--100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="section__title text-center">
-                            <h2 class="title__line">OUR <span class="text--theme">SERVICES</span></h2>
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="service__section__wrap clearfix mt--60">
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-                            <div class="service foo">
-                                <div class="service__thumb">
-                                    <a href="single-service.html">
-                                        <img src="images/service/1.jpg" alt="service images">
-                                    </a>
-                                    <div class="service__hover">
-                                        <div class="service__action">
-                                            <a href="single-service.html">DETAILS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service__details">
-                                    <h2><a href="single-service.html">CONSTRUCTION</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-                            <div class="service foo">
-                                <div class="service__thumb">
-                                    <a href="single-service.html">
-                                        <img src="images/service/2.jpg" alt="service images">
-                                    </a>
-                                    <div class="service__hover">
-                                        <div class="service__action">
-                                            <a href="single-service.html">DETAILS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service__details">
-                                    <h2><a href="single-service.html">RENOVATION</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-                            <div class="service foo">
-                                <div class="service__thumb">
-                                    <a href="single-service.html">
-                                        <img src="images/service/3.jpg" alt="service images">
-                                    </a>
-                                    <div class="service__hover">
-                                        <div class="service__action">
-                                            <a href="single-service.html">DETAILS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service__details">
-                                    <h2><a href="single-service.html">ARCHITECTURE</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 hidden-sm col-xs-12">
-                            <div class="service foo">
-                                <div class="service__thumb">
-                                    <a href="single-service.html">
-                                        <img src="images/service/4.jpg" alt="service images">
-                                    </a>
-                                    <div class="service__hover">
-                                        <div class="service__action">
-                                            <a href="single-service.html">DETAILS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service__details">
-                                    <h2><a href="single-service.html">CONCRETE SUPPLY</a></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Service Area -->
-        <!-- Start Offer Area -->
-        <section class="htc__offer__area pt--150 bg__white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                        <div class="offer">
-                            <div class="offer__icon">
-                                <img src="images/others/icon-2/1.png" alt="icon images">
-                            </div>
-                            <div class="offer__details">
-                                <h2><a href="#">TOP RATED</a></h2>
-                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled demoralized</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 xmt-40">
-                        <div class="offer separator">
-                            <div class="offer__icon">
-                                <img src="images/others/icon-2/2.png" alt="icon images">
-                            </div>
-                            <div class="offer__details">
-                                <h2><a href="#">BEST QUALITY</a></h2>
-                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled demoralized</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4 hidden-sm col-xs-12 xmt-40">
-                        <div class="offer separator">
-                            <div class="offer__icon">
-                                <img src="images/others/icon-2/3.png" alt="icon images">
-                            </div>
-                            <div class="offer__details">
-                                <h2><a href="#">LOW COST</a></h2>
-                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled demoralized</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Offer Area -->
         <!-- Start Latest Project Area -->
-        <section class="htc__latest__project__area pt--150 bg__white">
-            <div class="container-fluid">
+        <section class="htc__latest__project__area ptb--150 bg__white text__pos">
+            <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="section__title text-center">
@@ -453,13 +437,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="htc__latest__project__wrap clearfix mt--60">
+                    <div class="htc__latest__project__wrap h1__project clearfix mt--30">
                         <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                            <div class="project foo">
+                        <div class="col-md-5 col-lg-5 hidden-sm col-xs-12">
+                            <div class="project__itm foo">
                                 <div class="project__thumb">
                                     <a href="single-project.html">
-                                        <img src="images/latest-project/1.jpg" alt="project images">
+                                        <img src="{% static 'construction/images/lst-project-3/1.jpg' %}" alt="project images">
                                     </a>
                                     <div class="project__hover__info">
                                         <div class="project__action">
@@ -471,148 +455,160 @@
                             </div>
                         </div>
                         <!-- End Single Project -->
-                        <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 hidden-sm col-xs-12">
-                            <div class="project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/latest-project/2.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
+                        <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="project__itm foo">
+                                        <div class="project__thumb">
+                                            <a href="single-project.html">
+                                                <img src="{% static 'construction/images/lst-project-3/2.jpg' %}" alt="project images">
+                                            </a>
+                                            <div class="project__hover__info">
+                                                <div class="project__action">
+                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
+                                                    <h4>DURATION : 6 MONTH</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="project__itm foo">
+                                        <div class="project__thumb">
+                                            <a href="single-project.html">
+                                                <img src="{% static 'construction/images/lst-project-3/3.jpg' %}" alt="project images">
+                                            </a>
+                                            <div class="project__hover__info">
+                                                <div class="project__action">
+                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
+                                                    <h4>DURATION : 6 MONTH</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="project__itm foo">
+                                        <div class="project__thumb">
+                                            <a href="single-project.html">
+                                                <img src="{% static 'construction/images/lst-project-3/4.jpg' %}" alt="project images">
+                                            </a>
+                                            <div class="project__hover__info">
+                                                <div class="project__action">
+                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
+                                                    <h4>DURATION : 6 MONTH</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="project__itm foo">
+                                        <div class="project__thumb">
+                                            <a href="single-project.html">
+                                                <img src="{% static 'construction/images/lst-project-3/5.jpg' %}" alt="project images">
+                                            </a>
+                                            <div class="project__hover__info">
+                                                <div class="project__action">
+                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
+                                                    <h4>DURATION : 6 MONTH</h4>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Single Project -->
-                        <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 hidden-sm col-xs-12">
-                            <div class="project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/latest-project/3.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
-                        <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                            <div class="project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/latest-project/5.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
-                        <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                            <div class="project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/latest-project/6.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
-                        <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                            <div class="project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/latest-project/6.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
-                        <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                            <div class="project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/latest-project/7.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
-                        <!-- Start Single Project -->
-                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                            <div class="project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/latest-project/7.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
                     </div>
                 </div>
+            </div>
+            <div class="text__shape">
+                <h2>PROJECTS</h2>
             </div>
         </section>
         <!-- End Latest Project Area -->
-        <!-- Start Call to Action Area -->
-        <section class="htc__callto__action bg__cat--1">
-            <div class="container">
+          <!-- Start Counter Up Area -->
+          <section class="htc__counterup__area count--2 h1__countdown bg__gray">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="callto__action__wrap">
-                            <h2># BEST CONSTRUCTION THEME</h2>
-                            <div class="callto__action__btn">
-                                <a class="htc__btn--transparent" href="#">BUY NOW</a>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="counterup__left__thumb">
+                            <img src="{% static 'construction/images/about/4.png' %}" alt="images">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        <div class="htc__callto__action">
+                            <h2># OUR <span class="text--theme">CONSTRUCTION</span> EXPERIENCE</h2>
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble</p>
+                            <div class="htc__call__btn">
+                                <a class="htc__btn" href="#">CONTACT US</a>
                             </div>
+                        </div>
+                        <div class="htc__counterup__wrap" style="background: rgba(0, 0, 0, 0) url('/static/construction/images/bg/10.png') no-repeat scroll center center / cover ;">
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">598</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>PROJECTS</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact hidden-md">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">128</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>CLIENTS</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">339</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>SUCCESS</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">109</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>AWARDS</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Call to Action Area -->
+        <!-- End Counter Up Area -->
         <!-- Start Team Area -->
-        <section class="htc__team__area bg__white ptb--150">
+        <section class="htc__team__area bg__white h1__team--one ptb--150 text__pos">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -629,7 +625,7 @@
                             <div class="team foo">
                                 <div class="team__inner">
                                     <div class="team__thumb">
-                                        <img src="images/team/1.jpg" alt="team image">
+                                        <img src="{% static 'construction/images/team/1.jpg' %}" alt="team image">
                                     </div>
                                     <div class="team__hover__info">
                                         <ul class="team__social__link">
@@ -655,7 +651,7 @@
                             <div class="team foo">
                                 <div class="team__inner">
                                     <div class="team__thumb">
-                                        <img src="images/team/2.jpg" alt="team image">
+                                        <img src="{% static 'construction/images/team/2.jpg' %}" alt="team image">
                                     </div>
                                     <div class="team__hover__info">
                                         <ul class="team__social__link">
@@ -681,7 +677,7 @@
                             <div class="team foo">
                                 <div class="team__inner">
                                     <div class="team__thumb">
-                                        <img src="images/team/3.jpg" alt="team image">
+                                        <img src="{% static 'construction/images/team/3.jpg' %}" alt="team image">
                                     </div>
                                     <div class="team__hover__info">
                                         <ul class="team__social__link">
@@ -707,7 +703,7 @@
                             <div class="team foo">
                                 <div class="team__inner">
                                     <div class="team__thumb">
-                                        <img src="images/team/4.jpg" alt="team image">
+                                        <img src="{% static 'construction/images/team/4.jpg' %}" alt="team image">
                                     </div>
                                     <div class="team__hover__info">
                                         <ul class="team__social__link">
@@ -731,100 +727,103 @@
                     </div>
                 </div>
             </div>
+            <div class="text__shape">
+                <h2>TEAM</h2>
+            </div>
         </section>
         <!-- End Team Area -->
-        <!-- Start Testimonial Area -->
-        <section class="htc__testimonial__area ptb--130" data--gray__overlay="9" style="background: rgba(0, 0, 0, 0) url(images/bg/1.jpg) no-repeat fixed center center / cover ;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12">
-                        <div class="htc__testimonial__wrap">
-                            <div class="section__title text-left">
-                                <h2 class="title__line">CLIENTS <span class="text--theme">SAYS</span></h2>
-                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasur</p>
-                            </div>
-                            <div class="testimonial__activation clearfix">
-                                 <!-- Start Single Testimonial -->
-                                <div class="testimonial">
-                                    <div class="testimonial__thumb">
-                                         <img src="images/test/client/1.jpg" alt="clint image">
-                                    </div>
-                                    <div class="testimonial__details">
-                                        <div class="tes__icon">
-                                            <i class="fa fa-quote-right"></i>
-                                        </div>
-                                        <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, Alves</h4>
-                                    </div>
-                                </div>
-                                 <!-- End Single Testimonial -->
-                                 <!-- Start Single Testimonial -->
-                                <div class="testimonial">
-                                    <div class="testimonial__thumb">
-                                         <img src="images/test/client/1.jpg" alt="clint image">
-                                    </div>
-                                    <div class="testimonial__details">
-                                        <div class="tes__icon">
-                                            <i class="fa fa-quote-right"></i>
-                                        </div>
-                                        <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, Alves</h4>
-                                    </div>
-                                </div>
-                                 <!-- End Single Testimonial -->
-                                 <!-- Start Single Testimonial -->
-                                <div class="testimonial">
-                                    <div class="testimonial__thumb">
-                                         <img src="images/test/client/1.jpg" alt="clint image">
-                                    </div>
-                                    <div class="testimonial__details">
-                                        <div class="tes__icon">
-                                            <i class="fa fa-quote-right"></i>
-                                        </div>
-                                        <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, Alves</h4>
-                                    </div>
-                                </div>
-                                 <!-- End Single Testimonial -->
-                            </div>
+      <!-- Start Testimonial Area -->
+      <section class="htc__testimonial__area ptb--130" data--gray__overlay="9.5" style="background: rgba(0, 0, 0, 0) url('/static/construction/images/bg/1.jpg') no-repeat fixed center center / cover ;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12">
+                    <div class="htc__testimonial__wrap">
+                        <div class="section__title text-left">
+                            <h2 class="title__line">CLIENTS <span class="text--theme">SAYS</span></h2>
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasur</p>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
-                        <div class="reguest__quote">
-                            <div class="section__title text-left">
-                                <h2 class="title__line">REQUEST A <span class="text--theme">QUOTE</span></h2>
-                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasur</p>
-                            </div>
-                            <form id="contact-form" action="https://d29u17ylf1ylz9.cloudfront.net/simply-construction/mail-faq.php" method="post">
-                                <div class="clint__comment__form">
-                                    <div class="single__cl__form">
-                                        <input name="name" type="text" placeholder="Name">
-                                        <input name="email" type="email" placeholder="Email">
-                                    </div>
-                                    <div class="single__cl__form">
-                                        <input name="telephone" type="tel" placeholder="Phone">
-                                        <input name="subject" type="text" placeholder="Subject">
-                                    </div>
-                                    <div class="single__cl__message">
-                                        <textarea name="message" placeholder="Massage"></textarea>
-                                    </div>
-                                    <div class="clint__submit__btn">
-                                        <button class="submit htc__btn" type="submit">
-                                            SEND MESSAGE 
-                                        </button>
-                                    </div>
+                        <div class="testimonial__activation clearfix">
+                             <!-- Start Single Testimonial -->
+                            <div class="testimonial">
+                                <div class="testimonial__thumb">
+                                     <img src="{% static 'construction/images/test/client/1.jpg' %}" alt="clint image">
                                 </div>
-                            </form>
-                            <p class="form-messege"></p>
+                                <div class="testimonial__details">
+                                    <div class="tes__icon">
+                                        <i class="fa fa-quote-right"></i>
+                                    </div>
+                                    <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
+                                    <h2><a href="#">Person Name</a></h2>
+                                    <h4>CEO</h4>
+                                </div>
+                            </div>
+                             <!-- End Single Testimonial -->
+                             <!-- Start Single Testimonial -->
+                            <div class="testimonial">
+                                <div class="testimonial__thumb">
+                                     <img src="{% static 'construction/images/test/client/1.jpg' %}" alt="clint image">
+                                </div>
+                                <div class="testimonial__details">
+                                    <div class="tes__icon">
+                                        <i class="fa fa-quote-right"></i>
+                                    </div>
+                                    <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
+                                    <h2><a href="#">Person Name</a></h2>
+                                    <h4>CEO</h4>
+                                </div>
+                            </div>
+                             <!-- End Single Testimonial -->
+                             <!-- Start Single Testimonial -->
+                            <div class="testimonial">
+                                <div class="testimonial__thumb">
+                                     <img src="{% static 'construction/images/test/client/1.jpg' %}" alt="clint image">
+                                </div>
+                                <div class="testimonial__details">
+                                    <div class="tes__icon">
+                                        <i class="fa fa-quote-right"></i>
+                                    </div>
+                                    <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
+                                    <h2><a href="#">Person Name</a></h2>
+                                    <h4>CEO</h4>
+                                </div>
+                            </div>
+                             <!-- End Single Testimonial -->
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
+                    <div class="reguest__quote">
+                        <div class="section__title text-left">
+                            <h2 class="title__line">REQUEST A <span class="text--theme">QUOTE</span></h2>
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasur</p>
+                        </div>
+                        <form id="contact-form" action="https://d29u17ylf1ylz9.cloudfront.net/simply-construction/mail-faq.php" method="post">
+                            <div class="clint__comment__form">
+                                <div class="single__cl__form">
+                                    <input name="name" type="text" placeholder="Name">
+                                    <input name="email" type="email" placeholder="Email">
+                                </div>
+                                <div class="single__cl__form">
+                                    <input name="telephone" type="tel" placeholder="Phone">
+                                    <input name="subject" type="text" placeholder="Subject">
+                                </div>
+                                <div class="single__cl__message">
+                                    <textarea name="message" placeholder="Massage"></textarea>
+                                </div>
+                                <div class="clint__submit__btn">
+                                    <button class="submit htc__btn" type="submit">
+                                        SEND MESSAGE 
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="form-messege"></p>
+                    </div>
+                </div>
             </div>
-        </section>
-        <!-- End Testimonial Area -->
+        </div>
+    </section>
+    <!-- End Testimonial Area -->
         <!-- Start Blog Area -->
         <section class="htc__blog__area pt--150 bg__white">
             <div class="container">
@@ -841,7 +840,7 @@
                             <div class="blog foo">
                                 <div class="blog__thumb">
                                     <a href="blog-details.html">
-                                        <img src="images/blog/blog-img/1.jpg" alt="blog image">
+                                        <img src="{% static 'construction/images/blog/blog-img/1.jpg' %}" alt="blog image">
                                     </a>
                                     <div class="blog__hover__info">
                                         <ul class="blog__meta">
@@ -865,7 +864,7 @@
                             <div class="blog foo">
                                 <div class="blog__thumb">
                                     <a href="blog-details.html">
-                                        <img src="images/blog/blog-img/2.jpg" alt="blog image">
+                                        <img src="{% static 'construction/images/blog/blog-img/2.jpg' %}" alt="blog image">
                                     </a>
                                     <div class="blog__hover__info">
                                         <ul class="blog__meta">
@@ -889,7 +888,7 @@
                             <div class="blog foo">
                                 <div class="blog__thumb">
                                     <a href="blog-details.html">
-                                        <img src="images/blog/blog-img/3.jpg" alt="blog image">
+                                        <img src="{% static 'construction/images/blog/blog-img/3.jpg' %}" alt="blog image">
                                     </a>
                                     <div class="blog__hover__info">
                                         <ul class="blog__meta">
@@ -919,11 +918,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="brand__list">
-                            <li><a href="#"><img src="images/brand/1.jpg" alt="brand images"></a></li>
-                            <li><a href="#"><img src="images/brand/2.jpg" alt="brand images"></a></li>
-                            <li><a href="#"><img src="images/brand/3.jpg" alt="brand images"></a></li>
-                            <li><a href="#"><img src="images/brand/4.jpg" alt="brand images"></a></li>
-                            <li><a href="#"><img src="images/brand/5.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="{% static 'construction/images/brand/1.jpg' %}" alt="brand images"></a></li>
+                            <li><a href="#"><img src="{% static 'construction/images/brand/2.jpg' %}" alt="brand images"></a></li>
+                            <li><a href="#"><img src="{% static 'construction/images/brand/3.jpg' %}" alt="brand images"></a></li>
+                            <li><a href="#"><img src="{% static 'construction/images/brand/4.jpg' %}" alt="brand images"></a></li>
+                            <li><a href="#"><img src="{% static 'construction/images/brand/5.jpg' %}" alt="brand images"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -962,7 +961,7 @@
             </div>
             <div class="newsletter__thumb">
                 <div class="newsletter__thumb__inner">
-                    <img src="images/others/1.png" alt="newsletter img">
+                    <img src="{% static 'construction/images/others/1.png' %}" alt="newsletter img">
                 </div>
             </div>
         </section>
@@ -1019,7 +1018,7 @@
                         <div class="htc__footer__wrap clearfix">
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">ABOUT</h2>
                                     </div>
@@ -1031,7 +1030,7 @@
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 xmt-40">
-                                <div class="footer quick__link">
+                                <div class="footer quick__link foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">QUICK LINKS</h2>
                                     </div>
@@ -1054,24 +1053,24 @@
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 smt-40 xmt-40">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">INSTAGRAM</h2>
                                     </div>
                                     <ul class="footer__instagram">
-                                        <li><a href="#"><img src="images/blog/sm-img/1.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/2.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/3.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/4.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/5.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/6.jpg" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/1.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/2.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/3.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/4.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/5.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/6.jpg' %}" alt="images"></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-2 col-lg-offset-1 col-sm-6 col-xs-12 smt-40 xmt-40">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">INQUARY</h2>
                                         <div class="footer__link">
@@ -1115,21 +1114,17 @@
 
     <!-- Placed js at the end of the document so the pages load faster -->
 
-    <!-- jquery latest version -->
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap framework js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All js plugins included in this file. -->
-    <script src="js/plugins.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Waypoints.min.js. -->
-    <script src="js/waypoints.min.js"></script>
-    <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="js/main.js"></script>
-
+<!-- jquery latest version -->
+<script src="{% static 'construction/js/vendor/jquery-1.12.0.min.js' %}"></script>
+<!-- Bootstrap framework js -->
+<script src="{% static 'construction/js/bootstrap.min.js' %}"></script>
+<!-- All js plugins included in this file. -->
+<script src="{% static 'construction/js/plugins.js' %}"></script>
+<script src="{% static 'construction/js/slick.min.js' %}"></script>
+<script src="{% static 'construction/js/owl.carousel.min.js' %}"></script>
+<!-- Waypoints.min.js. -->
+<script src="{% static 'construction/js/waypoints.min.js' %}"></script>
+<!-- Main js file that contains all jQuery plugins activation. -->
+<script src="{% static 'construction/js/main.js' %}"></script>
 </body>
-
-
-
 </html>

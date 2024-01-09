@@ -21,11 +21,11 @@
 }
 
 .slider__bg--1 {
-  background: rgba(0, 0, 0, 0) url("../../images/slider/bg/1.jpg") no-repeat scroll 0 0 / cover ;
+  background: rgba(0, 0, 0, 0) url("/static/construction/images/slider/bg/1.jpg") no-repeat scroll 0 0 / cover ;
 }
 
 .slider__bg--2 {
-  background: rgba(0, 0, 0, 0) url("../../images/slider/bg/2.jpg") no-repeat scroll 0 0 / cover ;
+  background: rgba(0, 0, 0, 0) url("/static/construction/images/slider/bg/2.jpg") no-repeat scroll 0 0 / cover ;
 }
 
 /*-----------------------------------------

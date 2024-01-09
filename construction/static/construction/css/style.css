@@ -385,7 +385,7 @@ About 2
     position: relative;
 }
 .offer.separator::before {
-    background: rgba(0, 0, 0, 0) url("images/icons/line.png") no-repeat scroll 100% 100% / cover ;
+    background: rgba(0, 0, 0, 0) url("/static/construction/images/icons/line.png") no-repeat scroll 100% 100% / cover ;
     content: "";
     height: 100%;
     left: -43px;
