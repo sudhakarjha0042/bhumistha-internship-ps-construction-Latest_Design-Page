@@ -1,6 +1,6 @@
 from django.shortcuts import render,get_object_or_404
 from .models import Project, ProjectImage
-
+from .forms import ContactForm
 
 def about(request):
     return render(request, 'construction/about.html')
@@ -11,8 +11,18 @@ def blog_details(request):
 def blog(request):
     return render(request, 'construction/blog.html')
 
-def contact(request):
-    return render(request, 'construction/contact.html')
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Save the form data to the database
+            form.save()
+            return render(request, 'construction/success.html')  # Create a success.html template
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'construction/contact.html', {'form': form})
 
 def gallery(request):
     return render(request, 'construction/gallery.html')
