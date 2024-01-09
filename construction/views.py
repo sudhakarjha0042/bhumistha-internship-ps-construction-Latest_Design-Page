@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
+from .models import Project, ProjectImage
+
 
 def about(request):
     return render(request, 'construction/about.html')
@@ -21,8 +23,17 @@ def index(request):
 def login_register(request):
     return render(request, 'construction/login-register.html')
 
-def projects_one(request):
-    return render(request, 'construction/projects-one.html')
+def project_detail(request, pk):
+    project = get_object_or_404(Project, pk=pk)
+    project_images = project.projectimage_set.all()
+    project_pdfs = project.projectpdf_set.all()
+
+    return render(request, 'construction/single-project.html', {
+        'project': project,
+        'project_images': project_images,
+        'project_pdfs': project_pdfs,
+        'brochure_url': project.brochure.url,  # Add the brochure URL to the context
+    })
 
 def projects_three(request):
     return render(request, 'construction/projects-three.html')
@@ -40,7 +51,10 @@ def single_service(request):
     return render(request, 'construction/single-service.html')
 
 def gallery(request):
-    return render(request, 'construction/gallery.html')
+    projects = Project.objects.all()
+    project_images = ProjectImage.objects.all()
+    print(project_images)
+    return render(request, 'construction/gallery.html', {'projects': projects, 'project_images': project_images})
 
 
 

@@ -1,39 +1,36 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
-
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Projects || Simply Construction HTML5 Template</title>
+    <title>Simply Construction || HTML5 Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'construction/images/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'construction/apple-touch-icon.png' %}">
 
     <!-- All css files are included here. -->
-    <!-- Bootstrap fremwork main css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Owl Carousel  main css -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <!-- This core.css file contents all plugings css file. -->
-    <link rel="stylesheet" href="css/core.css">
+    <!-- Bootstrap framework main css -->
+    <link rel="stylesheet" href="{% static 'construction/css/bootstrap.min.css' %}">
+    <!-- Owl Carousel main css -->
+    <link rel="stylesheet" href="{% static 'construction/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'construction/css/owl.theme.default.min.css' %}">
+    <!-- This core.css file contains all plugins css files. -->
+    <link rel="stylesheet" href="{% static 'construction/css/core.css' %}">
     <!-- Theme shortcodes/elements style -->
-    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="{% static 'construction/css/shortcode/shortcodes.css' %}">
     <!-- Theme main style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'construction/css/style.css' %}">
     <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{% static 'construction/css/responsive.css' %}">
     <!-- User style -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{% static 'construction/css/custom.css' %}">
 
 
-    <!-- Modernizr JS -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -78,52 +75,27 @@
                         <div class="col-md-2 col-sm-6 col-xs-7">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="images/logo/sinply-construction.png" alt="logo image">
+                                    <img src="{% static 'construction/images/logo/sinply-construction.png' %}" alt="logo image">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-8 col-sm-6 col-xs-5">
                             <nav class="main__menu__nav  hidden-xs hidden-sm">
                                 <ul class="main__menu">
-                                    <li class="drop"><a href="index.html">HOME</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Home 01</a></li>
-                                            <li><a href="index-2.html">Home 02</a></li>
-                                            <li><a href="index-3.html">Home 03</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="index.html">HOME</a></li>
                                     <li><a href="about.html">ABOUT</a></li>
                                     <li><a href="service.html">SERVICES</a></li>
-                                    <li class="drop"><a href="#">pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="service.html">service</a></li>
-                                            <li><a href="single-service.html">Single service</a></li>
-                                            <li><a href="projects-one.html">projects one</a></li>
-                                            <li><a href="projects-two.html">projects two</a></li>
-                                            <li><a href="projects-three.html">projects three</a></li>
-                                            <li><a href="single-project.html">Single Project</a></li>
-                                            <li><a href="blog.html">BLog</a></li>
-                                            <li><a href="blog-one-column.html">blog one column</a></li>
-                                            <li><a href="blog-two-column.html">blog two column</a></li>
-                                            <li><a href="blog-details.html">blog Details</a></li>
-                                            <li><a href="login-register.html">Log in & Register</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="gallery.html">GALLERY</a></li>
                                     <li class="drop"><a href="#">PROJECTS</a>
                                         <ul class="dropdown">
-                                            <li><a href="projects-one.html">projects one</a></li>
-                                            <li><a href="projects-two.html">projects two</a></li>
-                                            <li><a href="projects-three.html">projects three</a></li>
+                                            <li><a href="projects-one.html">Completed</a></li>
+                                            <li><a href="projects-two.html">Ongoing</a></li>
+                                            <li><a href="projects-three.html">Upcoming</a></li>
                                         </ul>
                                     </li>
-                                    <li class="drop"><a href="blog.html">BLOG</a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog.html">BLog</a></li>
-                                            <li><a href="blog-one-column.html">blog one column</a></li>
-                                            <li><a href="blog-two-column.html">blog two column</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="blog.html">BLOG</a></li>
                                     <li><a href="contact.html">CONTACT</a></li>
+                                    <li><a href="#">Emi Calculator</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
@@ -204,176 +176,43 @@
             </div>
         </div>
         <!-- End Bradcaump area -->
+
+
         <!-- Start Latest Project Area -->
-        <div class="htc__latest__project__area pb--150 ptb--120 bg__white">
-            <div class="container">
-                <div class="row">
-                    <div class="htc__latest__project__wrap h1__project clearfix">
-                        <!-- Start Single Project -->
-                        <div class="col-md-5 col-lg-5 hidden-sm col-xs-12">
-                            <div class="project__itm foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/lst-project-3/1.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION PRE WORK</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
-                        <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12">
-                            <div class="row">
-                                <div class="col-md-6">
+<!-- gallery.html -->
+
+    <div class="htc__latest__project__area pb--150 ptb--120 bg__white">
+        <div class="container">
+            <div class="row">
+                {% for project in projects %}
+                    <div class="col-md-12" style="margin-bottom: 3rem;">
+                        <h2>{{ project.title }}</h2>
+                        <div class="row">
+                            {% for image in project.projectimage_set.all %}
+                                <div class="col-md-3">
                                     <div class="project__itm foo">
                                         <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/2.jpg" alt="project images">
+                                            <a href="{% url 'construction:project_detail' pk=project.id %}">
+                                                <img src="{{ image.image.url }}" alt="{{ project.title }}">
                                             </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/3.jpg" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/4.jpg" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/5.jpg" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/2.jpg" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/3.jpg" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/4.jpg" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="single-project.html">
-                                                <img src="images/lst-project-3/5.jpg" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-lg-5 hidden-sm col-xs-12">
-                            <div class="project__itm foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/lst-project-3/1.jpg" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION PRE WORK</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
+    </div>
+
+
         <!-- End Latest Project Area -->
+
+
+
+
+
         <!-- Start Newsletter Area -->
         <section class="htc__newsletter__area ptb--90 bg__gray">
             <div class="container">
@@ -463,7 +302,7 @@
                         <div class="htc__footer__wrap clearfix">
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">ABOUT</h2>
                                     </div>
@@ -475,7 +314,7 @@
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 xmt-40">
-                                <div class="footer quick__link">
+                                <div class="footer quick__link foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">QUICK LINKS</h2>
                                     </div>
@@ -498,24 +337,24 @@
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 smt-40 xmt-40">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">INSTAGRAM</h2>
                                     </div>
                                     <ul class="footer__instagram">
-                                        <li><a href="#"><img src="images/blog/sm-img/1.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/2.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/3.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/4.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/5.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/6.jpg" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/1.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/2.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/3.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/4.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/5.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/6.jpg' %}" alt="images"></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-2 col-lg-offset-1 col-sm-6 col-xs-12 smt-40 xmt-40">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">INQUARY</h2>
                                         <div class="footer__link">
@@ -559,21 +398,17 @@
 
     <!-- Placed js at the end of the document so the pages load faster -->
 
-    <!-- jquery latest version -->
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap framework js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All js plugins included in this file. -->
-    <script src="js/plugins.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Waypoints.min.js. -->
-    <script src="js/waypoints.min.js"></script>
-    <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="js/main.js"></script>
-
+<!-- jquery latest version -->
+<script src="{% static 'construction/js/vendor/jquery-1.12.0.min.js' %}"></script>
+<!-- Bootstrap framework js -->
+<script src="{% static 'construction/js/bootstrap.min.js' %}"></script>
+<!-- All js plugins included in this file. -->
+<script src="{% static 'construction/js/plugins.js' %}"></script>
+<script src="{% static 'construction/js/slick.min.js' %}"></script>
+<script src="{% static 'construction/js/owl.carousel.min.js' %}"></script>
+<!-- Waypoints.min.js. -->
+<script src="{% static 'construction/js/waypoints.min.js' %}"></script>
+<!-- Main js file that contains all jQuery plugins activation. -->
+<script src="{% static 'construction/js/main.js' %}"></script>
 </body>
-
-
-
 </html>

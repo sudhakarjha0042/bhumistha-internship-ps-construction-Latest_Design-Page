@@ -1,40 +1,36 @@
-
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
-
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Single Project || Simply Construction HTML5 Template</title>
+    <title>Simply Construction || HTML5 Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'construction/images/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'construction/apple-touch-icon.png' %}">
 
     <!-- All css files are included here. -->
-    <!-- Bootstrap fremwork main css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Owl Carousel  main css -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <!-- This core.css file contents all plugings css file. -->
-    <link rel="stylesheet" href="css/core.css">
+    <!-- Bootstrap framework main css -->
+    <link rel="stylesheet" href="{% static 'construction/css/bootstrap.min.css' %}">
+    <!-- Owl Carousel main css -->
+    <link rel="stylesheet" href="{% static 'construction/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'construction/css/owl.theme.default.min.css' %}">
+    <!-- This core.css file contains all plugins css files. -->
+    <link rel="stylesheet" href="{% static 'construction/css/core.css' %}">
     <!-- Theme shortcodes/elements style -->
-    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="{% static 'construction/css/shortcode/shortcodes.css' %}">
     <!-- Theme main style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'construction/css/style.css' %}">
     <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{% static 'construction/css/responsive.css' %}">
     <!-- User style -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{% static 'construction/css/custom.css' %}">
 
 
-    <!-- Modernizr JS -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -79,52 +75,27 @@
                         <div class="col-md-2 col-sm-6 col-xs-7">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="images/logo/sinply-construction.png" alt="logo image">
+                                    <img src="{% static 'construction/images/logo/sinply-construction.png' %}" alt="logo image">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-8 col-sm-6 col-xs-5">
                             <nav class="main__menu__nav  hidden-xs hidden-sm">
                                 <ul class="main__menu">
-                                    <li class="drop"><a href="index.html">HOME</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Home 01</a></li>
-                                            <li><a href="index-2.html">Home 02</a></li>
-                                            <li><a href="index-3.html">Home 03</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="index.html">HOME</a></li>
                                     <li><a href="about.html">ABOUT</a></li>
                                     <li><a href="service.html">SERVICES</a></li>
-                                    <li class="drop"><a href="#">pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="service.html">service</a></li>
-                                            <li><a href="single-service.html">Single service</a></li>
-                                            <li><a href="projects-one.html">projects one</a></li>
-                                            <li><a href="projects-two.html">projects two</a></li>
-                                            <li><a href="projects-three.html">projects three</a></li>
-                                            <li><a href="single-project.html">Single Project</a></li>
-                                            <li><a href="blog.html">BLog</a></li>
-                                            <li><a href="blog-one-column.html">blog one column</a></li>
-                                            <li><a href="blog-two-column.html">blog two column</a></li>
-                                            <li><a href="blog-details.html">blog Details</a></li>
-                                            <li><a href="login-register.html">Log in & Register</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="gallery.html">GALLERY</a></li>
                                     <li class="drop"><a href="#">PROJECTS</a>
                                         <ul class="dropdown">
-                                            <li><a href="projects-one.html">projects one</a></li>
-                                            <li><a href="projects-two.html">projects two</a></li>
-                                            <li><a href="projects-three.html">projects three</a></li>
+                                            <li><a href="projects-one.html">Completed</a></li>
+                                            <li><a href="projects-two.html">Ongoing</a></li>
+                                            <li><a href="projects-three.html">Upcoming</a></li>
                                         </ul>
                                     </li>
-                                    <li class="drop"><a href="blog.html">BLOG</a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog.html">BLog</a></li>
-                                            <li><a href="blog-one-column.html">blog one column</a></li>
-                                            <li><a href="blog-two-column.html">blog two column</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="blog.html">BLOG</a></li>
                                     <li><a href="contact.html">CONTACT</a></li>
+                                    <li><a href="#">Emi Calculator</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
@@ -207,183 +178,99 @@
             </div>
         </div>
         <!-- End Bradcaump area -->
-        <!-- Start Blog Area -->
-        <section class="htc__project__details__page ptb--150 bg__white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-                        <div class="htc__single__service">
-                            <div class="htc__single__service__tab">
-                                <div class="ht-portfolio-pic-show">
-                                    <div class="ht-portfolio-full-image tab-content">
-                                        <div role="tabpanel" class="tab-pane fade in active" id="img-tab-1">
-                                            <img src="images/blog/big-images/5.jpg" alt="full-image">
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="img-tab-2">
-                                            <img src="images/blog/big-images/5.jpg" alt="full-image">
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="img-tab-3">
-                                            <img src="images/blog/big-images/5.jpg" alt="full-image">
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="img-tab-4">
-                                            <img src="images/blog/big-images/5.jpg" alt="full-image">
+
+            <!-- Start Blog Area -->
+            <section class="htc__project__details__page ptb--150 bg__white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <div class="htc__single__service">
+                                <div class="htc__single__service__tab">
+                                    <div class="ht-portfolio-pic-show">
+                                        <div class="ht-portfolio-full-image tab-content">
+                                            {% for image in project_images %}
+                                                <div role="tabpanel" class="tab-pane fade {% if forloop.first %}in active{% endif %}" id="img-tab-{{ image.id }}">
+                                                    <img src="{{ image.image.url }}" alt="full-image">
+                                                </div>
+                                            {% endfor %}
                                         </div>
                                     </div>
+                                    <!-- Start Small images -->
+                                    <div class="ht__service__small__image nav nav-tabs clearfix">
+                                        <ul role="tablist" class="prodict-det-small  clearfix">
+                                            {% for image in project_images %}
+                                                <li role="presentation" class="pot-small-img img-tab-{{ image.id }} {% if forloop.first %}active{% endif %}">
+                                                    <a href="#img-tab-{{ image.id }}" role="tab" data-toggle="tab">
+                                                        <img src="{{ image.image.url }}" alt="small-image">
+                                                    </a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <!-- End Small images -->
                                 </div>
-                                <!-- Start Small images -->
-                                <div class="ht__service__small__image nav nav-tabs clearfix">
-                                    <ul role="tablist" class="prodict-det-small  clearfix">
-                                        <li role="presentation" class="pot-small-img img-tab-1 active">
-                                            <a href="#img-tab-1" role="tab" data-toggle="tab">
-                                                <img src="images/service/small-img/1.jpg" alt="small-image">
-                                            </a>
-                                        </li>
-                                        <li role="presentation" class="pot-small-img img-tab-2">
-                                            <a href="#img-tab-2" role="tab" data-toggle="tab">
-                                                <img src="images/service/small-img/2.jpg" alt="small-image">
-                                            </a>
-                                        </li>
-                                        <li role="presentation" class="pot-small-img img-tab-3">
-                                            <a href="#img-tab-3" role="tab" data-toggle="tab">
-                                                <img src="images/service/small-img/3.jpg" alt="small-image">
-                                            </a>
-                                        </li>
-                                        <li role="presentation" class="pot-small-img img-tab-4">
-                                            <a href="#img-tab-4" role="tab" data-toggle="tab">
-                                                <img src="images/service/small-img/4.jpg" alt="small-image">
-                                            </a>
-                                        </li>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="single__project__rightsidebar">
+                                <!-- Start Single Item -->
+                                <div class="pro__dtl__inner bg__gray">
+                                    <h2>PROJECT DETAILS</h2>
+                                    <div class="pro__dtl__content">
+                                        <ul class="pro__dtl__list font__bold">
+                                            <li>RERA No: {{ project.rera_no }}</li>
+                                            <li>Amenities: {{ project.amenities }}</li>
+                                            <li>Status: {{ project.get_status_display }}</li>
+                                        </ul>
+                                        <!-- You can add more project details here -->
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Start Single Item -->
+                                <div class="download__project bg__gray">
+                                    <h2><a href="{{ brochure_url }}" target="_blank">DOWNLOAD PROJECT BROCHURE</a></h2>
+                                </div>
+                                <!-- End Single Item -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="htc__pro__desc__container">
+                                <!-- start Single Details -->
+                                <div class="single__project__details">
+                                    <h2>{{ project.title }}</h2>
+                                    <p>{{ project.description }}</p>
+                                </div>
+                                <!-- End Single Details -->
+        
+                                <!-- start Single Details -->
+                                <div class="single__project__details">
+                                    <h2>PROJECT DESCRIPTION</h2>
+                                    <p>{{ project.description }}</p>
+                                </div>
+                                <!-- End Single Details -->
+        
+                                <!-- start Single Details -->
+                                <div class="single__project__details">
+                                    <h2>IMPORTANT FACTS</h2>
+                                    <p>{{ project.important_facts }}</p>
+                                    <ul class="facts__list">
+                                        {% for fact in project.additional_facts.all %}
+                                            <li><a href="#"><i class="fa fa-angle-double-right"></i>{{ fact.text }}</a></li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
-                                <!-- End Small images --> 
+                                <!-- End Single Details -->
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="single__project__rightsidebar">
-                            <!-- Start Single Item -->
-                            <div class="pro__dtl__inner bg__gray">
-                                <h2>PROJECT DETAILS</h2>
-                                <div class="pro__dtl__content">
-                                    <ul class="pro__dtl__list font__bold">
-                                        <li>CLIENT :</li>
-                                        <li>LOCATION :</li>
-                                        <li>BUDGET :</li>
-                                        <li>SURFCE AREA :</li>
-                                        <li>SECTOR :</li>
-                                    </ul>
-                                    <ul class="pro__dtl__list">
-                                        <li>Simplex Ltd.</li>
-                                        <li>San Francisco</li>
-                                        <li>$35,000</li>
-                                        <li>4200 sf2</li>
-                                        <li>CONSTRUCTION</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Start Single Item -->
-                            <div class="download__project bg__gray">
-                                <h2><a href="#">DOWNLOADPROJECT REPORT</a></h2>
-                            </div>
-                            <!-- End Single Item -->
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="htc__pro__desc__container">
-                            <!-- start Single Details -->
-                            <div class="single__project__details">
-                                <h2>CONSTRUCTION</h2>
-                                <p>On the other hand, we denounce with righteous tion and dislike men who are so beguiled demorad On the ther hand, we denounce with pain and trouble that re bound to ensue; and equal blame belongs to those ho fail in their sty through weakness of will, ch is the same as saying through shrinking from</p>
-                            </div>
-                            <!-- End Single Details -->
-                            <!-- start Single Details -->
-                            <div class="single__project__details">
-                                <h2>PROJECT DESCRIPTION</h2>
-                                <p>On the other hand, we denounce with righteous indignion and dislike men who are so beguiled demoralized On the er hand, we denounce with pain and trouble that are und to ensue; and ual blame belongs to those who win</p>
-                                <p>On the other hand, we denounce with righteous indignion and dislike men who are so beguiled demoralized On the er hand, we denounce with pain</p>
-                            </div>
-                            <!-- End Single Details -->
-                            <!-- start Single Details -->
-                            <div class="single__project__details">
-                                <h2>IMPORTANT FACTS</h2>
-                                <p>On the other hand, we denounce with righteous an dion and dislike men who are so beguiled</p>
-                                <ul class="facts__list">
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>On the other hand, we denounce with rious indignion and dislike men who we are</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i>On the other hand, we denounce with rious indignion and dislike men who we are</a></li>
-                                </ul>
-                            </div>
-                            <!-- End Single Details -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Blog Area -->
-        <!-- Start Service Area -->
-        <section class="htc__project__area bg__white pb--150">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="section__title text-center">
-                            <h2 class="title__line">RELATED <span class="text--theme">PROJECTS</span></h2>
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="rl__project__wrap clearfix mt--60 xmt-40">
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-                            <div class="rl__project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/lst-project-2/1.jpg" alt="project images">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-                            <div class="rl__project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/lst-project-2/2.jpg" alt="project images">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-                            <div class="rl__project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/lst-project-2/3.jpg" alt="project images">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                        <!-- Start Single Service -->
-                        <div class="col-md-3 col-lg-3 hidden-sm col-xs-12">
-                            <div class="rl__project foo">
-                                <div class="project__thumb">
-                                    <a href="single-project.html">
-                                        <img src="images/lst-project-2/4.jpg" alt="project images">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Service -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Service Area -->
+            </section>
+            <!-- End Blog Area -->
+        
+
+
         <!-- Start Newsletter Area -->
         <section class="htc__newsletter__area ptb--90 bg__gray">
             <div class="container">
@@ -421,8 +308,8 @@
             </div>
         </section>
         <!-- End Newsletter Area -->
-        <!-- Start Contact Address -->
-        <div class="htc__contact__address add-res bg__cat--1">
+         <!-- Start Contact Address -->
+         <div class="htc__contact__address add-res bg__cat--1">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -473,7 +360,7 @@
                         <div class="htc__footer__wrap clearfix">
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">ABOUT</h2>
                                     </div>
@@ -485,7 +372,7 @@
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 xmt-40">
-                                <div class="footer quick__link">
+                                <div class="footer quick__link foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">QUICK LINKS</h2>
                                     </div>
@@ -508,24 +395,24 @@
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 smt-40 xmt-40">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">INSTAGRAM</h2>
                                     </div>
                                     <ul class="footer__instagram">
-                                        <li><a href="#"><img src="images/blog/sm-img/1.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/2.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/3.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/4.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/5.jpg" alt="images"></a></li>
-                                        <li><a href="#"><img src="images/blog/sm-img/6.jpg" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/1.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/2.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/3.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/4.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/5.jpg' %}" alt="images"></a></li>
+                                        <li><a href="#"><img src="{% static 'construction/images/blog/sm-img/6.jpg' %}" alt="images"></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
                             <div class="col-md-3 col-lg-2 col-lg-offset-1 col-sm-6 col-xs-12 smt-40 xmt-40">
-                                <div class="footer">
+                                <div class="footer foo">
                                     <div class="footer__widget">
                                         <h2 class="ft__title">INQUARY</h2>
                                         <div class="footer__link">
@@ -569,21 +456,17 @@
 
     <!-- Placed js at the end of the document so the pages load faster -->
 
-    <!-- jquery latest version -->
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap framework js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All js plugins included in this file. -->
-    <script src="js/plugins.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Waypoints.min.js. -->
-    <script src="js/waypoints.min.js"></script>
-    <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="js/main.js"></script>
-
+<!-- jquery latest version -->
+<script src="{% static 'construction/js/vendor/jquery-1.12.0.min.js' %}"></script>
+<!-- Bootstrap framework js -->
+<script src="{% static 'construction/js/bootstrap.min.js' %}"></script>
+<!-- All js plugins included in this file. -->
+<script src="{% static 'construction/js/plugins.js' %}"></script>
+<script src="{% static 'construction/js/slick.min.js' %}"></script>
+<script src="{% static 'construction/js/owl.carousel.min.js' %}"></script>
+<!-- Waypoints.min.js. -->
+<script src="{% static 'construction/js/waypoints.min.js' %}"></script>
+<!-- Main js file that contains all jQuery plugins activation. -->
+<script src="{% static 'construction/js/main.js' %}"></script>
 </body>
-
-
-
 </html>
