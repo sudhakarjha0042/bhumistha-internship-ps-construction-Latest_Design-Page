@@ -17,4 +17,5 @@ urlpatterns = [
     path('service/', views.service, name='service'),
     path('single-project/', views.single_project, name='single_project'),
     path('single-service/', views.single_service, name='single_service'),
+    path('cal/', views.cal, name='cal'),
 ]

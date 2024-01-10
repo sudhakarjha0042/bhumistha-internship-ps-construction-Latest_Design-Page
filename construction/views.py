@@ -42,6 +42,8 @@ def single_service(request):
 def gallery(request):
     return render(request, 'construction/gallery.html')
 
+def cal(request):
+    return render(request, 'construction/cal.html')
 
 
 

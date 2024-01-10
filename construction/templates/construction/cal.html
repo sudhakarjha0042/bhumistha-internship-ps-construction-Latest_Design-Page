@@ -1,0 +1,178 @@
+{% extends "construction/nav_footer.html" %}
+{% load static %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Real Estate EMI Calculator</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Muli', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-family: 'Comfortaa', cursive;
+            border-bottom: 2px solid #000;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #777;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: inherit;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #343434;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #343434;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #scroll {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #343434;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+
+        #scroll:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <!-- EMI Calculator -->
+            <div style="width: 100%;">
+                <div style="width: 80%; margin: 0 auto;">
+                    <div style="margin-bottom: 20px;">
+                        <h2 style="color: #777; text-align: center; border-bottom: 2px solid #000; margin-bottom: 20px;">EMI Calculator</h2>
+                    </div>
+                    <center>
+                        <table style="width: 100%; border-collapse: inherit; margin-top: 20px;">
+                            <thead>
+                                <tr style="background-color: #343434; color: #fff; font-weight: bold;">
+                                    <th style="padding: 10px;">Term</th>
+                                    <th style="padding: 10px;">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="text-align: center;">
+                                    <td style="padding: 10px;"><b>Amount</b></td>
+                                    <td id="amountDisplay" style="padding: 10px;"><b>₹0</b></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="padding: 10px;"><b>Total Duration</b></td>
+                                    <td id="durationDisplay" style="padding: 10px;"><b>0 Months</b></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="padding: 10px;"><b>Interest Rate</b></td>
+                                    <td id="interestDisplay" style="padding: 10px;"><b>0%</b></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="padding: 10px;"><b>Total Interest</b></td>
+                                    <td id="totalInterestDisplay" style="padding: 10px;"><b>₹0</b></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="padding: 10px;"><b>Total Amount</b></td>
+                                    <td id="totalAmountDisplay" style="padding: 10px;"><b>₹0</b></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td style="padding: 10px;"><b>Pay Per Month (EMI)</b></td>
+                                    <td id="emiDisplay" style="padding: 10px;"><b>₹0</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+
+                    <div style="margin-bottom: 20px;">
+                        <div style="text-align: center;">
+                            <label for="loanAmount">Loan Amount: </label>
+                            <input type="number" id="loanAmount" placeholder="Enter Loan Amount" style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;">
+                            <label for="loanTerm">Loan Term (Months): </label>
+                            <input type="number" id="loanTerm" placeholder="Enter Loan Term" style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;">
+                            <label for="interestRate">Interest Rate (%): </label>
+                            <input type="number" id="interestRate" placeholder="Enter Interest Rate" style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;">
+                            <button onclick="calculateEMI()" style="background-color: #343434; color: #fff; padding: 10px; border: none; cursor: pointer;">Calculate EMI</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll to top -->
+            <a href="#" style="position: fixed; bottom: 20px; right: 20px; background-color: #343434; color: #fff; padding: 10px; text-align: center; text-decoration: none; border-radius: 50%;" id="scroll"><i
+                    class="fas fa-angle-up"></i></a>
+            <!-- End Scroll To top -->
+        </div>
+    </div>
+
+    <script>
+        function calculateEMI() {
+            var amount = parseFloat(document.getElementById('loanAmount').value);
+            var months = parseInt(document.getElementById('loanTerm').value);
+            var interestRate = parseFloat(document.getElementById('interestRate').value);
+
+            var interest = amount * interestRate / 100;
+            var totalAmount = amount + interest;
+            var emi = totalAmount / months;
+
+            document.getElementById('amountDisplay').innerHTML = '<b>₹' + amount.toFixed(2) + '</b>';
+            document.getElementById('durationDisplay').innerHTML = '<b>' + months + ' Months</b>';
+            document.getElementById('interestDisplay').innerHTML = '<b>' + interestRate + '%</b>';
+            document.getElementById('totalInterestDisplay').innerHTML = '<b>₹' + interest.toFixed(2) + '</b>';
+            document.getElementById('totalAmountDisplay').innerHTML = '<b>₹' + totalAmount.toFixed(2) + '</b>';
+            document.getElementById('emiDisplay').innerHTML = '<b>₹' + emi.toFixed(2) + '</b>';
+        }
+    </script>
+
+</body>
+
+</html>
+{% endblock body %}
