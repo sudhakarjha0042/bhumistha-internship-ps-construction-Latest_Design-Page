@@ -234,7 +234,8 @@
                         <div class="htc__contact__form__wrap">
                             <h2 class="title__line--5">SEND US A MESSAGE</h2>
                             <div class="contact-form-wrap">
-                                <form id="contact-form" action="#" method="post">
+                                <form id="contact-form" method="post">
+                                    {% csrf_token %}
                                     <div class="single-contact-inner">
                                         <div class="single-contact-form">
                                             <div class="contact-box name">
@@ -245,9 +246,13 @@
                                                 <span>Your Email*</span>
                                                 <input type="email" name="email">
                                             </div>
-                                            <div class="contact-box subject">
-                                                <span>Subject*</span>
-                                                <input type="text" name="subject">
+                                            <div class="contact-box category">
+                                                <span>Category*</span>
+                                                <select name="category">
+                                                    <option value="Residential">Residential</option>
+                                                    <option value="Industrial">Industrial</option>
+                                                    <option value="Commercial">Commercial</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="single-contact-form">
