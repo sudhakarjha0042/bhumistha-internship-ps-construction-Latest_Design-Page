@@ -10,10 +10,7 @@
         "src": "build_files.sh",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "construction",
-          "env": {
-            "DISABLE_COLLECTSTATIC": "1"
-          }
+          "distDir": "construction"
         }
       }
     ],
@@ -26,6 +23,9 @@
         "src": "/(.*)",
         "dest": "ps/wsgi.py"
       }
-    ]
+    ],
+    "env": {
+      "DISABLE_COLLECTSTATIC": "1"
+    }
   }
   
