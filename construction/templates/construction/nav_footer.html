@@ -84,38 +84,47 @@
                                     <li><a href="#">SERVICES</a></li>
                                     <li><a href="/gallery">GALLERY</a></li>
                                     <li class="drop"><a href="#">PROJECTS</a>
-                                        <ul class="dropdown">
-                                            <li><a href="projects-one.html">Completed</a></li>
-                                            <li><a href="projects-two.html">Ongoing</a></li>
+                                        <ul class="dropdown" aria-labelledby="dropdownMenu1">
+                                            <li><a href="#projects-one.html">Completed</a></li>
+                                            <li class="drop">
+                                                <a tabindex="-1" class="test" href="#projects-two.html">Ongoing</a>
+                                                <ul class="dropdown-menu dropdown-toggle" style="display: block; left: 100%;position: absolute; top: 0">
+                                                    <li><a tabindex="-1" href="#">Submenu 1</a></li>
+                                                    <li><a tabindex="-1" href="#">Submenu 2</a></li>
+                                                    <li><a tabindex="-1" href="#">Submenu 3</a></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="projects-three.html">Upcoming</a></li>
                                         </ul>
-                                    </li>
+                                    </li>
                                     <li><a href="#">BLOG</a></li>
                                     <li><a href="/contact">CONTACT</a></li>
-                                    <li><a href="#">Emi Calculator</a></li>
+                                    <li><a href="#Emi Calculator">Emi Calculator</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
                                 <nav id="mobile_dropdown">
                                     <ul>
-                                        <li><a href="/">Home</a>
-                                        </li>
-                                        <li><a href="about.html">ABOUT</a></li>
+                                        <li><a href="/">HOME</a></li>
+                                        <li><a href="/about">ABOUT</a></li>
+                                        <li><a href="#">SERVICES</a></li>
+                                        <li><a href="/gallery">GALLERY</a></li>
                                         <li><a href="#">PROJECTS</a>
                                             <ul>
-                                                <li><a href="projects-one.html">projects one</a></li>
-                                                <li><a href="projects-two.html">projects two</a></li>
-                                                <li><a href="projects-three.html">projects three</a></li>
+                                                <li><a href="#projects-one.html">Completed</a></li>
+                                                <li><a href="#projects-two.html">Ongoing</a>
+                                                    <ul>
+                                                        <li><a href="#">Submenu one</a></li>
+                                                        <li><a href="#">Submenu two</a></li>
+                                                        <li><a href="#">Submenu three</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="projects-three.html">Upcoming</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="blog.html">blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">BLog</a></li>
-                                                <li><a href="blog-one-column.html">blog one column</a></li>
-                                                <li><a href="blog-two-column.html">blog two column</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        </li>
+                                        <li><a href="#blog">BLOG</a>
+                                        <li><a href="/contact">CONTACT</a></li>
+                                        <li><a href="#Emi Calculator">Emi Calculator</a></li>
                                     </ul>
                                 </nav>
                             </div> 
