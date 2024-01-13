@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Styled Section</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      /* Add your custom styles here */
+      h2.elementor-heading-title {
+        font-family: "Georgia", serif; /* Use your preferred font-family */
+        font-weight: bold;
+        font-size: 48px; /* Adjust the font size as needed */
+        letter-spacing: 1px; /* Adjust letter-spacing for smoothness */
+        margin-bottom: 20px; /* Add margin for spacing */
+      }
+      .custom-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .custom-card:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .custom-card-header {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .custom-card-body {
+        padding: 15px;
+      }
+
+      .accourdion-icon {
+        cursor: pointer;
+      }
+
+      .carousel-container {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-right: 15px; /* Adjust the margin as needed */
+      }
+
+      @media (max-width: 1024px) {
+        .carousel-container {
+          position: static;
+          transform: none;
+          margin: auto; /* Adjust the margin as needed */
+        }
+
+        .carousel-inner img {
+          max-width: 100%;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section
+      class="elementor-section elementor-inner-section elementor-element elementor-element-12bd01c elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+      data-id="12bd01c"
+      data-element_type="section"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="elementor-widget-wrap elementor-element-populated">
+              <div
+                class="elementor-element elementor-element-b35bd38 elementor-widget elementor-widget-heading animated fadeInDown"
+                data-id="b35bd38"
+                data-element_type="widget"
+                data-settings='{"_animation":"fadeInDown"}'
+                data-widget_type="heading.default"
+              >
+                <div class="elementor-widget-container">
+                  <h2 class="elementor-heading-title elementor-size-default">
+                    Specifications
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <!-- Windows Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Windows
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>
+                2 or 3 Track powder coated aluminium sliding window with granite
+                sill
+              </li>
+              <li>MS safety railing</li>
+              <li>Full height French windows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flooring and Tiles Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Flooring and Tiles
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>Vitrified tiles - 2x2 ft in Living room, Bedroom, Kitchen</li>
+              <li>
+                Anti skid floor and dado tiles in washroom (till lintel level),
+                dry terrace, and terraces
+              </li>
+              <li>
+                Digital / double polished vitrified tiles for Lobby and Entrance
+                Porch
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Automation
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>Fully automated homes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Walls Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Walls
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>
+                AAC Block Work: 6" thick external walls and 4" internal walls
+              </li>
+              <li>Gypsum Finish Internal Plaster</li>
+              <li>Double coat sand faced plaster externally</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doors Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Doors
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>Both side laminated entrance doors</li>
+              <li>Wooden/Ply frame on Main and Bedroom doors</li>
+              <li>Brass/Stainless steel finishing accessories fittings</li>
+              <li>
+                Main door with Safety Lock, Night Latch, Tower bolt, and Magic
+                eye
+              </li>
+              <li>
+                Steel Gray or similar granite frame for All washroom doors
+              </li>
+              <li>Europa or similar lock</li>
+              <li>Decorative name plate at the main door</li>
+              <li>PVC/internal flush doors for bathroom and bedrooms</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Structure Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Structure
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>R.C.C Framed structure</li>
+              <li>Earthquake Resistance design and framed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Electrical Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Electrical
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>Provision for TV, Telephone point</li>
+              <li>Provision for Water purifier</li>
+              <li>CCTV at Entrance Porch</li>
+              <li>Wi-Fi cable point centrally located</li>
+              <li>Provision of exhaust fan in kitchen and all bathrooms</li>
+              <li>Provision for split AC installation in all the bedrooms</li>
+              <li>Modular switches</li>
+              <li>Concealed fire retardant low smoke copper wire</li>
+              <li>Circuit breaker</li>
+              <li>5 Amp charging point on Terrace</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kitchen Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Kitchen
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>Granite top platform or similar</li>
+              <li>Stainless steel sink</li>
+              <li>Cera/Jaquar/Equivalent CP Fittings</li>
+              <li>
+                Glazed dado tiles above kitchen platform up to lintel level
+              </li>
+              <li>Electrical points for all the basic amenities</li>
+              <li>
+                Washing machine plumbing &amp; electrical points at Dry Balcony
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plumbing Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Plumbing
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>Concealed piping</li>
+              <li>Cera/Jaquar/Equivalent CP and sanitary fittings</li>
+              <li>Geyser provision in all the bathrooms</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paint Card -->
+      <div class="col-md-6">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h4 class="elementor-heading-title elementor-size-default">
+              Paint
+            </h4>
+          </div>
+          <div class="custom-card-body">
+            <ul>
+              <li>Oil bound distemper for internal walls</li>
+              <li>Apex paint for external walls</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+      <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="https://via.placeholder.com/250" alt="Image 1" />
+          </div>
+          <div class="item">
+            <img src="https://via.placeholder.com/250" alt="Image 2" />
+          </div>
+          <div class="item">
+            <img src="https://via.placeholder.com/250" alt="Image 3" />
+          </div>
+          <!-- Add more items as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Carousel Script -->
+    <script>
+      $(document).ready(function () {
+        $("#imageCarousel").carousel({
+          interval: 3000, // Change image every 3 seconds
+          pause: "hover",
+        });
+      });
+    </script>
+  </body>
+</html>
