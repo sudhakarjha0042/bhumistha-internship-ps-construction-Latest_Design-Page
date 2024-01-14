@@ -17,4 +17,5 @@ urlpatterns = [
     path('single-project/', views.single_project, name='single_project'),
     path('single-service/', views.single_service, name='single_service'),
     path('project/<int:pk>/', views.project_detail, name='project_detail'),
+    path('calc/', views.calc, name='calc'),
 ]
