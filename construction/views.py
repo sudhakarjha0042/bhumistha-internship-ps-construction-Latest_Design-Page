@@ -28,7 +28,7 @@ def gallery(request):
     return render(request, 'construction/gallery.html')
 
 def index(request):
-    return render(request, 'construction//')
+    return render(request, 'construction/index.html')
 
 def login_register(request):
     return render(request, 'construction/login-register.html')
