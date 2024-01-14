@@ -252,6 +252,13 @@ $('.image-popup').magnificPopup({
 
 })(jQuery);
 
-
+// specififcation.js
+// <!-- Carousel Script -->
+$(document).ready(function () {
+  $("#imageCarousel").carousel({
+    interval: 3000, // Change image every 3 seconds
+    pause: "hover",
+  });
+});
 
 

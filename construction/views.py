@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-from .models import Project, ProjectImage
+from .models import Project, ProjectImage,Amenity,Specification,LocationAdvantage
 from .forms import ContactForm
 
 def about(request):
@@ -37,12 +37,19 @@ def project_detail(request, pk):
     project = get_object_or_404(Project, pk=pk)
     project_images = project.projectimage_set.all()
     project_pdfs = project.projectpdf_set.all()
-
+    specifications = Specification.objects.all()
+    amenities = Amenity.objects.all()
+    location_advantages=LocationAdvantage.objects.all()
+    category = project.get_category_display()
     return render(request, 'construction/single-project.html', {
         'project': project,
         'project_images': project_images,
         'project_pdfs': project_pdfs,
-        'brochure_url': project.brochure.url,  # Add the brochure URL to the context
+        'brochure_url': project.brochure.url,
+        'specifications': specifications,
+        'amenities': amenities,
+        'location_advantages':location_advantages,
+        'category': category,
     })
 
 def projects_three(request):

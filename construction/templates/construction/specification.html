@@ -9,7 +9,7 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
     <style>
-      /* Add your custom styles here */
+      /* specififcation.css */
       h2.elementor-heading-title {
         font-family: "Georgia", serif; /* Use your preferred font-family */
         font-weight: bold;
@@ -27,12 +27,6 @@
 
       .custom-card:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .custom-card-header {
-        background-color: #f8f9fa;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
       }
 
       .custom-card-body {
@@ -62,6 +56,30 @@
           max-width: 100%;
           margin: auto;
         }
+      }
+
+      .custom-card-header {
+        background-color: #f8f9fa;
+        padding: 1px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+      }
+
+      .custom-card-body {
+        padding: 15px;
+        display: none; /* Initially hide the custom-card-body */
+      }
+
+      .custom-card.active .custom-card-body {
+        display: block; /* Show the custom-card-body when the card is active */
+      }
+
+      .accourdion-icon {
+        transition: transform 0.6s ease-in; /* Add smooth transition to the arrow */
+      }
+
+      .custom-card.active .accourdion-icon {
+        transform: rotate(180deg); /* Rotate the arrow when the card is active */
       }
     </style>
   </head>
@@ -95,26 +113,22 @@
       </div>
     </section>
     <div class="container">
-      <!-- Windows Card -->
-      <div class="col-md-6">
-        <div class="custom-card">
-          <div class="custom-card-header">
-            <h4 class="elementor-heading-title elementor-size-default">
-              Windows
-            </h4>
-          </div>
-          <div class="custom-card-body">
-            <ul>
-              <li>
-                2 or 3 Track powder coated aluminium sliding window with granite
-                sill
-              </li>
-              <li>MS safety railing</li>
-              <li>Full height French windows</li>
-            </ul>
-          </div>
-        </div>
+     <!-- Windows Card -->
+     <div class="col-md-6 custom-card">
+      <div class="custom-card-header" data-toggle="collapse" data-target="#windowsBody">
+        <h4 class="elementor-heading-title elementor-size-default">
+          Windows
+          <span class="accourdion-icon glyphicon glyphicon-chevron-down pull-right"></span>
+        </h4>
       </div>
+      <div id="windowsBody" class="custom-card-body collapse">
+        <ul>
+          <li>2 or 3 Track powder coated aluminium sliding window with granite sill</li>
+          <li>MS safety railing</li>
+          <li>Full height French windows</li>
+        </ul>
+      </div>
+    </div>
 
       <!-- Flooring and Tiles Card -->
       <div class="col-md-6">
