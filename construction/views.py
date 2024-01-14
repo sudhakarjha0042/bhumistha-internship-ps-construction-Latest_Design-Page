@@ -28,7 +28,7 @@ def gallery(request):
     return render(request, 'construction/gallery.html')
 
 def index(request):
-    return render(request, 'construction/index.html')
+    return render(request, 'construction//')
 
 def login_register(request):
     return render(request, 'construction/login-register.html')
@@ -39,8 +39,9 @@ def project_detail(request, pk):
     project_pdfs = project.projectpdf_set.all()
     specifications = Specification.objects.all()
     amenities = Amenity.objects.all()
-    location_advantages=LocationAdvantage.objects.all()
+    location_advantages = LocationAdvantage.objects.filter(project=project)    
     category = project.get_category_display()
+
     return render(request, 'construction/single-project.html', {
         'project': project,
         'project_images': project_images,
@@ -48,9 +49,10 @@ def project_detail(request, pk):
         'brochure_url': project.brochure.url,
         'specifications': specifications,
         'amenities': amenities,
-        'location_advantages':location_advantages,
+        'location_advantages': location_advantages,
         'category': category,
     })
+
 
 def projects_three(request):
     return render(request, 'construction/projects-three.html')
