@@ -31,7 +31,12 @@
             <div class="row">
                 {% for project in projects %}
                     <div class="col-md-12" style="margin-bottom: 3rem;">
-                        <h2>{{ project.title }}</h2>
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-default">
+                                {{ project.title }}
+                            </h2>
+                            <hr style="border-color: #333;">
+                          </div>
                         <div class="row">
                             {% for image in project.projectimage_set.all %}
                                 <div class="col-md-3">

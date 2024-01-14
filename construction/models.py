@@ -1,5 +1,36 @@
-# models.py
 from django.db import models
+
+class Specification(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    project = models.ForeignKey('Project', on_delete=models.CASCADE, default=1)
+
+    def get_description_list(self):
+            # Split the description into sentences based on periods
+            return [sentence.strip() for sentence in self.description.split('.') if sentence]
+
+    def __str__(self):
+        return self.title
+    
+class LocationAdvantage(models.Model):
+    title = models.CharField(max_length=255,blank=True,null=True)
+    description = models.TextField()
+    project = models.ForeignKey('Project', on_delete=models.CASCADE, default=1)
+
+    def get_description_list(self):
+            # Split the description into sentences based on periods
+            return [sentence.strip() for sentence in self.description.split('.') if sentence]
+
+    def __str__(self):
+        return self.title    
+
+class Amenity(models.Model):
+    name = models.CharField(max_length=255)
+    thumbnail = models.ImageField(upload_to='amenity_thumbnails/')
+    project = models.ForeignKey('Project', on_delete=models.CASCADE, default=1)
+
+    def __str__(self):
+        return self.name
 
 class Project(models.Model):
     STATUS_CHOICES = [
@@ -11,12 +42,21 @@ class Project(models.Model):
     title = models.CharField(max_length=255)
     rera_no = models.CharField(max_length=20)
     brochure = models.FileField(upload_to='project_brochures/')
-    amenities = models.TextField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='upcoming')
+    description = models.TextField()
+    category = models.CharField(max_length=20, choices=[
+        ('Residential', 'Residential'),
+        ('Industrial', 'Industrial'),
+        ('Commercial', 'Commercial'),
+    ])
+    def get_description_list(self):
+        # Split the description into sentences based on periods
+        return [sentence.strip() for sentence in self.description.split('.') if sentence]
 
     def __str__(self):
-        return f'{self.title} - {self.get_status_display()}'
+        return f'{self.title} - {self.get_status_display()}- {self.category}'
 
+    
 
 class ProjectImage(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)

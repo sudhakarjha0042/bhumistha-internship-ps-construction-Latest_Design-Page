@@ -9,3 +9,76 @@
 /* ----------------------------------------------------
 	You can put your custom css code here: 
 -------------------------------------------------------*/
+
+      /* specififcation.css */
+      h2.elementor-heading-title {
+        font-family: "Georgia", serif; /* Use your preferred font-family */
+        font-weight: bold;
+        font-size: 48px; /* Adjust the font size as needed */
+        letter-spacing: 1px; /* Adjust letter-spacing for smoothness */
+        margin-bottom: 20px; /* Add margin for spacing */
+      }
+      .custom-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .custom-card:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .custom-card-body {
+        padding: 15px;
+      }
+
+      .accourdion-icon {
+        cursor: pointer;
+      }
+
+      .carousel-container {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-right: 15px; /* Adjust the margin as needed */
+      }
+
+      @media (max-width: 1024px) {
+        .carousel-container {
+          position: static;
+          transform: none;
+          margin: auto; /* Adjust the margin as needed */
+        }
+
+        .carousel-inner img {
+          max-width: 100%;
+          margin: auto;
+        }
+      }
+
+      .custom-card-header {
+        background-color: #f8f9fa;
+        padding:0.9rem;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+      }
+
+      .custom-card-body {
+        padding: 15px;
+        display: none; /* Initially hide the custom-card-body */
+      }
+
+      .custom-card.active .custom-card-body {
+        display: block; /* Show the custom-card-body when the card is active */
+      }
+
+      .accourdion-icon {
+        transition: transform 0.6s ease-in; /* Add smooth transition to the arrow */
+      }
+
+      .custom-card.active .accourdion-icon {
+        transform: rotate(180deg); /* Rotate the arrow when the card is active */
+      }
