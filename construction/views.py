@@ -66,6 +66,7 @@ def gallery(request):
     print(project_images)
     return render(request, 'construction/gallery.html', {'projects': projects, 'project_images': project_images})
 
-
+def calc(request):
+    return render(request, 'construction/calc.html')
 
 

@@ -55,9 +55,9 @@
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                             <div class="header__top__right">
                                 <ul class="login-register">
-                                    <li><a href="login-register.html">LOGIN</a></li>
+                                    <li><a href="/login-register">LOGIN</a></li>
                                     <li class="separator">/</li>
-                                    <li><a href="login-register.html">REGISTER</a></li>
+                                    <li><a href="/login-register">REGISTER</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-md-2 col-sm-6 col-xs-7">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <img src="{% static 'construction/images/logo/ps logo.png' %}" alt="logo image">
                                 </a>
                             </div>
@@ -83,23 +83,70 @@
                                     <li><a href="/about">ABOUT</a></li>
                                     <li><a href="#">SERVICES</a></li>
                                     <li><a href="/gallery">GALLERY</a></li>
-                                    <li class="drop"><a href="#">PROJECTS</a>
+                                    <li class="drop"><a href="#">PLOTTING</a>
                                         <ul class="dropdown" aria-labelledby="dropdownMenu1">
-                                            <li><a href="#projects-one.html">Completed</a></li>
-                                            <li class="drop">
-                                                <a tabindex="-1" class="test" href="#projects-two.html">Ongoing</a>
-                                                <ul class="dropdown-menu dropdown-toggle" style="display: block; left: 100%;position: absolute; top: 0">
-                                                    <li><a tabindex="-1" href="#">Submenu 1</a></li>
-                                                    <li><a tabindex="-1" href="#">Submenu 2</a></li>
-                                                    <li><a tabindex="-1" href="#">Submenu 3</a></li>
+                                            <li class="dropp">
+                                                <a href="#projects-one.html">Industrial <span style='font-size:20px;'>&#8677;</span></a>
+                                                <ul class="dropdown-menu-dropdown-toggle">
+                                                    <li class="dropp2">
+                                                        <a tabindex="-1" href="#">COMPLETED <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                        </ul>
+                                                        
+                                                    </li>
+                                                    <li class="dropp2"><a tabindex="-1" href="#">ONGOING <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropp2"><a tabindex="-1" href="#">UPCOMING <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                        </ul>
+                                                    </li>
                                                 </ul>
                                             </li>
-                                            <li><a href="projects-three.html">Upcoming</a></li>
+                                            <li class="dropp">
+                                                <a tabindex="-1" class="test" href="#projects-two.html">Residential <span style='font-size:20px;'>&#8677;</span></a>
+                                                <ul class="dropdown-menu-dropdown-toggle">
+                                                    <li class="dropp2">
+                                                        <a tabindex="-1" href="#">COMPLETED <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                        </ul>
+                                                        
+                                                    </li>
+                                                    <li class="dropp2"><a tabindex="-1" href="#">ONGOING <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropp2"><a tabindex="-1" href="#">UPCOMING <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
+                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            {% comment %} <li><a href="projects-three.html">Upcoming</a></li> {% endcomment %}
                                         </ul>
                                     </li>
                                     <li><a href="#">BLOG</a></li>
                                     <li><a href="/contact">CONTACT</a></li>
-                                    <li><a href="#Emi Calculator">Emi Calculator</a></li>
+                                    <li><a href="/calc">Emi Calculator</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
@@ -109,22 +156,64 @@
                                         <li><a href="/about">ABOUT</a></li>
                                         <li><a href="#">SERVICES</a></li>
                                         <li><a href="/gallery">GALLERY</a></li>
-                                        <li><a href="#">PROJECTS</a>
+                                        <li><a href="#">PLOTTING</a>
                                             <ul>
-                                                <li><a href="#projects-one.html">Completed</a></li>
-                                                <li><a href="#projects-two.html">Ongoing</a>
+                                                <li><a href="#projects-one.html">INDUSTRIAL</a>
                                                     <ul>
-                                                        <li><a href="#">Submenu one</a></li>
-                                                        <li><a href="#">Submenu two</a></li>
-                                                        <li><a href="#">Submenu three</a></li>
+                                                        <li><a href="#">COMPLETED</a>
+                                                            <ul>
+                                                                <li><a href="#">SUB MENU 1</a></li>
+                                                                <li><a href="#">SUB MENU 2</a></li>
+                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">ONGOING</a>
+                                                            <ul>
+                                                                <li><a href="#">SUB MENU 1</a></li>
+                                                                <li><a href="#">SUB MENU 2</a></li>
+                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">UPCOMING</a>
+                                                            <ul>
+                                                                <li><a href="#">SUB MENU 1</a></li>
+                                                                <li><a href="#">SUB MENU 2</a></li>
+                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                            </ul>
+                                                        </li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="projects-three.html">Upcoming</a></li>
+                                                <li><a href="#projects-two.html">RESIDENTIAL</a>
+                                                    <ul>
+                                                        <li><a href="#">COMPLETED</a>
+                                                            <ul>
+                                                                <li><a href="#">SUB MENU 1</a></li>
+                                                                <li><a href="#">SUB MENU 2</a></li>
+                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">ONGOING</a>
+                                                            <ul>
+                                                                <li><a href="#">SUB MENU 1</a></li>
+                                                                <li><a href="#">SUB MENU 2</a></li>
+                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">UPCOMING</a>
+                                                            <ul>
+                                                                <li><a href="#">SUB MENU 1</a></li>
+                                                                <li><a href="#">SUB MENU 2</a></li>
+                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                {% comment %} <li><a href="projects-three.html">Upcoming</a></li> {% endcomment %}
                                             </ul>
                                         </li>
                                         <li><a href="#blog">BLOG</a>
                                         <li><a href="/contact">CONTACT</a></li>
-                                        <li><a href="#Emi Calculator">Emi Calculator</a></li>
+                                        <li><a href="/calc">Emi Calculator</a></li>
                                     </ul>
                                 </nav>
                             </div> 

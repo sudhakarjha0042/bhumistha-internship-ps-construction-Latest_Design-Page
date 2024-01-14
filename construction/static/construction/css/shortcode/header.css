@@ -258,7 +258,32 @@
     color: #fcc236;
 }
 
-
+.dropdown li.dropp:hover > ul.dropdown-menu-dropdown-toggle {
+  opacity: 1;
+  position: absolute;
+  width: max-content;
+  left: 100%;
+  top: 0;
+  padding: 2px;
+  display: block;
+} 
+.dropdown-menu-dropdown-toggle li.dropp2:hover > ul.dropdown-menu-dropdown-toggle2{
+  opacity: 1;
+  position: absolute;
+  width: max-content;
+  left: 100%;
+  top: 1;
+  padding: 2px;
+  display: block;
+} 
+.dropdown-menu-dropdown-toggle{
+   display: none;
+   position: relative;
+}
+.dropdown-menu-dropdown-toggle2{
+  display: none;
+  position: relative;
+}
 
 
 
