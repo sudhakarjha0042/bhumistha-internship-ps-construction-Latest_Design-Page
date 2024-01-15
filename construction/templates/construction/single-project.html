@@ -50,7 +50,7 @@
                                     <div class="ht-portfolio-full-image tab-content">
                                         {% for image in project_images %}
                                             <div role="tabpanel" class="tab-pane fade {% if forloop.first %}in active{% endif %}" id="img-tab-{{ image.id }}">
-                                                <a href="{{ image.image.url }}" data-lightbox="gallery">
+                                                <a href="{{ image.image.url }}" data-lightbox="gallery" target="_blank">
                                                     <img src="{{ image.image.url }}" alt="full-image">
                                                 </a>
                                             </div>
@@ -97,29 +97,35 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="htc__pro__desc__container">
-        
-                                <!-- start Single Details -->
-                                <div class="single__project__details">
-                                    <h2>PROJECT DESCRIPTION</h2>
-                                    <p>{{ project.description }}</p>
-                                </div>
-                                <!-- End Single Details -->
-        
-                                <!-- start Single Details -->
-                                <div class="single__project__details">
-                                    <h2>LOCATION ADVANTAGE</h2>
-                                    <p>{{ project.important_facts }}</p>
-                                    <ul class="facts__list">
-                                        {% for sentence in location_advantages.get_description_list %}
-                                        <li class="fa fa-angle-double-right">
-                                          <span class="glyphicon glyphicon-hand-right"></span>
-                                          {{ sentence }}
-                                        </li>
-                                      {% endfor %}
-                                    </ul>
-                                </div>
+                      <div class="col-md-12">
+                          <div class="htc__pro__desc__container">
+      
+                              <!-- start Single Details -->
+                              <div class="single__project__details animated fadeInDown">
+                                  <h2>PROJECT DESCRIPTION</h2>
+                                  <div class="description-content text-justify">
+                                    {{ project.description | linebreaks }}
+                                </div>                                  </div>
+                              <!-- End Single Details -->
+      
+                              <!-- start Single Details -->
+                              <div class="single__project__details">
+                              <h2>LOCATION ADVANTAGE</h2>
+                              {% if project.important_facts %}
+                                  <p>{{ project.important_facts }}</p>
+                              {% endif %}
+                              <ul class="facts__list">
+                                  {% for location_advantage in location_advantages %}
+                                          <ul>
+                                              {% for point in location_advantage.get_description_list %}
+                                                <li class="fa fa-angle-double-right" style="font-size: 1.3rem;font-weight: 200;color: #606060;">{{ point }}</li>
+                                                <br>
+                                              {% endfor %}
+                                          </ul>
+                                      </li>
+                                  {% endfor %}
+                              </ul>
+                              </div>
                                 <!-- End Single Details -->
                             </div>
                         </div>
@@ -130,24 +136,24 @@
         
             <!-- Include Bootstrap 3.0.3 CSS -->
 
-<!-- Section for Specifications -->
-<section class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="elementor-widget-wrap elementor-element-populated">
-        <div class="elementor-element elementor-element-b35bd38 elementor-widget elementor-widget-heading animated fadeInDown"
-          data-id="b35bd38"
-          data-element_type="widget"
-          data-settings='{"_animation":"fadeInDown"}'
-          data-widget_type="heading.default">
-          <div class="elementor-widget-container" style="display: flex;">
-            <div class="yellow-line"></div>
-            <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Raleway', sans-serif; font-size: 30px;">SPECIFICATIONS</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <!-- Section for Specifications -->
+            <section class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-b35bd38 elementor-widget elementor-widget-heading animated fadeInDown"
+                      data-id="b35bd38"
+                      data-element_type="widget"
+                      data-settings='{"_animation":"fadeInDown"}'
+                      data-widget_type="heading.default">
+                      <div class="elementor-widget-container" style="display: flex;">
+                        <div class="yellow-line"></div>
+                        <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Raleway', sans-serif; font-size: 30px;">SPECIFICATIONS</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
   <!-- Content Section for Specifications -->
   <div class="row">
@@ -212,3 +218,4 @@
 
 
             {% endblock body %}
+
