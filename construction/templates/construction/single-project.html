@@ -1,3 +1,18 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200&family=Raleway:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-n3qP1+O5I/6chlv4r5lq01zv5RNYwF8uuT1p6PHiQTV5CVb3z/aU2qA9iaykb/QGcpaS0PpA+7BGOTfcXd/GRQ==" crossorigin="anonymous" />
+
+<style>
+  .yellow-line {
+    display: inline-block;
+    width: 3px; /* Adjust the width of the line as needed */
+    height: 30px; /* Adjust the height of the line as needed */
+    background-color: #FCC236;
+    margin-right: 15px; /* Adjust the gap between the line and the text as needed */
+  }
+</style>
+
 {% extends "construction/nav_footer.html" %}
 {% load static %}
 {% block body %}
@@ -10,9 +25,9 @@
                             <div class="bradcaump__inner text-center">
                                 <h2 class="bradcaump-title">PROJECTS</h2>
                                 <nav class="bradcaump-inner">
-                                  <a class="breadcrumb-item" href="/">Home</a>
+                                  <a class="breadcrumb-item" href="index.html">Home</a>
                                   <span class="brd-separetor">-</span>
-                                  <a class="breadcrumb-item" href="#">PROJECTS</a>
+                                  <a class="breadcrumb-item" href="service.html">PROJECTS</a>
                                   <span class="brd-separetor">-</span>
                                   <span class="breadcrumb-item active">Single PROJECTS</span>
                                 </nav>
@@ -28,34 +43,36 @@
             <section class="htc__project__details__page ptb--150 bg__white">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-                            <div class="htc__single__service">
-                                <div class="htc__single__service__tab">
-                                    <div class="ht-portfolio-pic-show">
-                                        <div class="ht-portfolio-full-image tab-content">
-                                            {% for image in project_images %}
-                                                <div role="tabpanel" class="tab-pane fade {% if forloop.first %}in active{% endif %}" id="img-tab-{{ image.id }}">
+                      <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                        <div class="htc__single__service">
+                            <div class="htc__single__service__tab">
+                                <div class="ht-portfolio-pic-show">
+                                    <div class="ht-portfolio-full-image tab-content">
+                                        {% for image in project_images %}
+                                            <div role="tabpanel" class="tab-pane fade {% if forloop.first %}in active{% endif %}" id="img-tab-{{ image.id }}">
+                                                <a href="{{ image.image.url }}" data-lightbox="gallery">
                                                     <img src="{{ image.image.url }}" alt="full-image">
-                                                </div>
-                                            {% endfor %}
-                                        </div>
+                                                </a>
+                                            </div>
+                                        {% endfor %}
                                     </div>
-                                    <!-- Start Small images -->
-                                    <div class="ht__service__small__image nav nav-tabs clearfix">
-                                        <ul role="tablist" class="prodict-det-small  clearfix">
-                                            {% for image in project_images %}
-                                                <li role="presentation" class="pot-small-img img-tab-{{ image.id }} {% if forloop.first %}active{% endif %}">
-                                                    <a href="#img-tab-{{ image.id }}" role="tab" data-toggle="tab">
-                                                        <img src="{{ image.image.url }}" alt="small-image">
-                                                    </a>
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    </div>
-                                    <!-- End Small images -->
                                 </div>
+                                <!-- Start Small images -->
+                                <div class="ht__service__small__image nav nav-tabs clearfix">
+                                    <ul role="tablist" class="prodict-det-small  clearfix">
+                                        {% for image in project_images %}
+                                            <li role="presentation" class="pot-small-img img-tab-{{ image.id }} {% if forloop.first %}active{% endif %}">
+                                                <a href="#img-tab-{{ image.id }}" role="tab" data-toggle="tab">
+                                                    <img src="{{ image.image.url }}" alt="small-image">
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <!-- End Small images -->
                             </div>
                         </div>
+                    </div>
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="single__project__rightsidebar">
                                 <!-- Start Single Item -->
@@ -84,34 +101,26 @@
                             <div class="htc__pro__desc__container">
         
                                 <!-- start Single Details -->
-                                <div class="single__project__details animated fadeInDown">
+                                <div class="single__project__details">
                                     <h2>PROJECT DESCRIPTION</h2>
-                                    <div class="description-content text-justify">
-                                      {{ project.description | linebreaks }}
-                                  </div>                                  </div>
+                                    <p>{{ project.description }}</p>
+                                </div>
                                 <!-- End Single Details -->
         
-   <!-- start Single Details -->
-<div class="single__project__details">
-  <h2>LOCATION ADVANTAGE</h2>
-  {% if project.important_facts %}
-      <p>{{ project.important_facts }}</p>
-  {% endif %}
-  <ul class="facts__list">
-      {% for location_advantage in location_advantages %}
-              <ul>
-                  {% for point in location_advantage.get_description_list %}
-                     <li class="fa fa-angle-double-right" style="font-size: 1.3rem;font-weight: 200;color: #606060;">{{ point }}</li>
-                     <br>
-                  {% endfor %}
-              </ul>
-          </li>
-      {% endfor %}
-  </ul>
-</div>
-<!-- End Single Details -->
-
-
+                                <!-- start Single Details -->
+                                <div class="single__project__details">
+                                    <h2>LOCATION ADVANTAGE</h2>
+                                    <p>{{ project.important_facts }}</p>
+                                    <ul class="facts__list">
+                                        {% for sentence in location_advantages.get_description_list %}
+                                        <li class="fa fa-angle-double-right">
+                                          <span class="glyphicon glyphicon-hand-right"></span>
+                                          {{ sentence }}
+                                        </li>
+                                      {% endfor %}
+                                    </ul>
+                                </div>
+                                <!-- End Single Details -->
                             </div>
                         </div>
                     </div>
@@ -131,8 +140,9 @@
           data-element_type="widget"
           data-settings='{"_animation":"fadeInDown"}'
           data-widget_type="heading.default">
-          <div class="elementor-widget-container">
-            <h2 class="elementor-heading-title elementor-size-default">Specifications</h2>
+          <div class="elementor-widget-container" style="display: flex;">
+            <div class="yellow-line"></div>
+            <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Raleway', sans-serif; font-size: 30px;">SPECIFICATIONS</h2>
           </div>
         </div>
       </div>
@@ -175,8 +185,9 @@
           data-element_type="widget"
           data-settings='{"_animation":"fadeInDown"}'
           data-widget_type="heading.default">
-          <div class="elementor-widget-container">
-            <h2 class="elementor-heading-title elementor-size-default">Amenities</h2>
+          <div class="elementor-widget-container" style="display: flex;">
+            <div class="yellow-line"></div>
+            <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Raleway', sans-serif; font-size: 30px;">AMNITIES</h2>
           </div>
         </div>
       </div>
@@ -197,4 +208,7 @@
     {% endfor %}
   </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-+lSAJee9efmO2nHi3JL6Rkm0R2+UOnQ3ZvQ3JGVwm3fN/tUjL8zP2s8eXQT2DC/xbrP2ZpM5TIQ6BEYkv9GC6A==" crossorigin="anonymous"></script>
+
+
             {% endblock body %}
