@@ -1,8 +1,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200&family=Raleway:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-n3qP1+O5I/6chlv4r5lq01zv5RNYwF8uuT1p6PHiQTV5CVb3z/aU2qA9iaykb/QGcpaS0PpA+7BGOTfcXd/GRQ==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-x/zIx6n7e4Y+ltZ2dQfi64D5Phz7v9oNMG+VuQQ1GEar9DtFGsKQPDfWjByYnGZkAmi+9a0qyORCmUY3i3C+GQ==" crossorigin="anonymous" />
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha512-u7IcS+C7HMuF1Jx4O7WBOMhq2nX3vcNT8sP3+a2R6bBbhDciqfUKWRSZmGBviL9M6GDTsuy4o5QFVpLU4ESiBA==" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-hxjU64QZdvH+2ck6v48tb5OHE8+wxLYbIzH5WJ6eueGdgtF4wFg2F3QQXJoZtNLE1nZSXPW6IzNvd25pGl9nuA==" crossorigin="anonymous"></script>
 <style>
   .yellow-line {
     display: inline-block;
@@ -11,6 +14,14 @@
     background-color: #FCC236;
     margin-right: 15px; /* Adjust the gap between the line and the text as needed */
   }
+  .project-details-panel {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.project-details-panel:hover {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    
+}
 </style>
 
 {% extends "construction/nav_footer.html" %}
@@ -41,29 +52,31 @@
 
             <!-- Start Blog Area -->
             <section class="htc__project__details__page ptb--150 bg__white">
-                <div class="container">
-                    <div class="row">
+              <div class="container">
+                  <div class="row">
                       <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-                        <div class="htc__single__service">
-                            <div class="htc__single__service__tab">
-                                <div class="ht-portfolio-pic-show">
-                                    <div class="ht-portfolio-full-image tab-content">
-                                        {% for image in project_images %}
-                                            <div role="tabpanel" class="tab-pane fade {% if forloop.first %}in active{% endif %}" id="img-tab-{{ image.id }}">
-                                                <a href="{{ image.image.url }}" data-lightbox="gallery">
-                                                    <img src="{{ image.image.url }}" alt="full-image">
+                          <div class="htc__single__service">
+                              <div class="htc__single__service__tab">
+                                  <div class="ht-portfolio-pic-show">
+                                      <div class="ht-portfolio-full-image tab-content">
+                                          {% for image in project_images %}
+                                              <div role="tabpanel" class="tab-pane fade {% if forloop.first %}in active{% endif %}" id="img-tab-{{ image.id }}">
+                                                <a class="fancybox" href="{{ image.image.url }}" data-fancybox="gallery" data-caption="{{ image.caption }}">
+                                                  <img src="{{ image.image.url }}" alt="full-image">
                                                 </a>
-                                            </div>
-                                        {% endfor %}
-                                    </div>
-                                </div>
+                                              </div>
+                                          {% endfor %}
+                                      </div>
+                                  </div>
                                 <!-- Start Small images -->
                                 <div class="ht__service__small__image nav nav-tabs clearfix">
                                     <ul role="tablist" class="prodict-det-small  clearfix">
                                         {% for image in project_images %}
                                             <li role="presentation" class="pot-small-img img-tab-{{ image.id }} {% if forloop.first %}active{% endif %}">
                                                 <a href="#img-tab-{{ image.id }}" role="tab" data-toggle="tab">
+                                                  <a class="fancybox" href="{{ image.image.url }}" data-fancybox="gallery" data-caption="{{ image.caption }}">
                                                     <img src="{{ image.image.url }}" alt="small-image">
+                                                  </a>
                                                 </a>
                                             </li>
                                         {% endfor %}
@@ -76,13 +89,13 @@
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="single__project__rightsidebar">
                                 <!-- Start Single Item -->
-                                <div class="pro__dtl__inner bg__gray">
+                                <div class="pro__dtl__inner bg__gray project-details-panel">
                                     <h2>PROJECT DETAILS</h2>
                                     <div class="pro__dtl__content">
                                         <ul class="pro__dtl__list font__bold">
-                                            <li>RERA No: {{ project.rera_no }}</li>
-                                            <li>Status: {{ project.get_status_display }}</li>
-                                            <li>Category: {{ project.category }}</li>
+                                            <li>RERA No: <span style="color: #FCC236;">{{ project.rera_no }}</span></li>
+                                            <li>Status: <span style="color: #FCC236;">{{ project.get_status_display }}</span></li>
+                                            <li>Category: <span style="color: #FCC236;">{{ project.category }}</span></li>
                                         </ul>
                                         <!-- You can add more project details here -->
                                     </div>
@@ -187,7 +200,7 @@
           data-widget_type="heading.default">
           <div class="elementor-widget-container" style="display: flex;">
             <div class="yellow-line"></div>
-            <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Raleway', sans-serif; font-size: 30px;">AMNITIES</h2>
+            <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Raleway', sans-serif; font-size: 30px;">AMENITIES</h2>
           </div>
         </div>
       </div>
@@ -197,18 +210,36 @@
   <div class="row">
     <!-- Add amenities loop here -->
     {% for amenity in amenities %}
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{{ amenity.thumbnail.url }}" style="height: 7rem;width: 8rem;" alt="{{ amenity.name }}">
-          <div class="caption center" style="text-align: center;">
-            <h3>{{ amenity.name }}</h3>
+    <div class="col-xs-6 col-sm-6 col-md-3 ">
+      <div class="panel panel-default project-details-panel">
+          <div class="panel-heading" >
+              <img src="{{ amenity.thumbnail.url }}" class="img-responsive" alt="{{ amenity.name }}" style="width: 100%;">
           </div>
-        </div>
+          <div class="panel-body text-center" style="background-color: #f5f5f5;">
+              <h4 style="font-family: 'Open Sans', sans-serif;">{{ amenity.name }}</h4>
+          </div>
       </div>
+  </div>
     {% endfor %}
   </div>
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-+lSAJee9efmO2nHi3JL6Rkm0R2+UOnQ3ZvQ3JGVwm3fN/tUjL8zP2s8eXQT2DC/xbrP2ZpM5TIQ6BEYkv9GC6A==" crossorigin="anonymous"></script>
-
+<script>
+  $(document).ready(function () {
+      $(".fancybox").fancybox({
+          loop: true, // Enables navigation wrapping
+          infobar: false, // Hide the infobar
+          buttons: ["close"], // Show only close button
+          arrows: true, // Show navigation arrows
+          keyboard: true, // Enable keyboard navigation
+          touch: {
+              vertical: false, // Disable vertical swipe gestures
+          },
+          transitionEffect: "fade", // Fade transition effect
+          transitionDuration: 300, // Duration of the transition in milliseconds
+          idleTime: false, // Disable the idle time before hiding navigation
+          protect: true, // Prevent right-clicking and downloading
+      });
+  });
+</script>
 
             {% endblock body %}
