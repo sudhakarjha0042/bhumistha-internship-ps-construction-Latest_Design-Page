@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, ProjectImage, ProjectPDF, ContactMessage, Amenity, Specification, LocationAdvantage
+from .models import Project, ProjectImage, ProjectPDF, ContactMessage, Amenity, Specification, LocationAdvantage, LoanDocumentSubmission
 
 class ProjectImageInline(admin.TabularInline):
     model = ProjectImage
@@ -27,3 +27,4 @@ admin.site.register(ContactMessage)
 admin.site.register(Amenity)
 admin.site.register(Specification)
 admin.site.register(LocationAdvantage)
+admin.site.register(LoanDocumentSubmission)

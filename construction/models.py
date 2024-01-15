@@ -87,3 +87,16 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return self.name
+
+class LoanDocumentSubmission(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    contact_no = models.CharField(max_length=20)
+    address = models.TextField()
+    aadhar_pdf = models.FileField(upload_to='contact_aadhar_pdfs/')
+    pan_pdf = models.FileField(upload_to='contact_pan_pdfs/')
+    salary_slip_pdf = models.FileField(upload_to='contact_salary_slip_pdfs/')
+    form16_pdf = models.FileField(upload_to='contact_form16_pdfs/')
+
+    def __str__(self):
+        return self.name

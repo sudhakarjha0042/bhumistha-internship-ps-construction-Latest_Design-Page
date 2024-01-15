@@ -1,0 +1,80 @@
+{% extends "construction/nav_footer.html" %}
+{% load static %}
+{% block body %}
+    <!-- Start Bradcaump area -->
+    <!-- ... (existing code) ... -->
+    <!-- End Bradcaump area -->
+
+    <!-- Start Contact Form -->
+    <section class="htc__contact__area bg__white ptb--150" style="margin-top: 0px;padding: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="htc__contact__form__wrap" style="margin-top: 0px;padding: 0;">
+                        <h2 class="title__line--5">SEND US A MESSAGE</h2>
+                        <div class="contact-form-wrap">
+                            <form id="contact-form" method="post" enctype="multipart/form-data" action="{% url 'construction:contact_form_submission' %}">
+                                {% csrf_token %}
+                                <div class="single-contact-inner">
+                                    <div class="single-contact-form">
+                                        <!-- Name -->
+                                        <div class="contact-box name">
+                                            <span>Your Name*</span>
+                                            <input type="text" name="name">
+                                        </div>
+                                        <!-- Email -->
+                                        <div class="contact-box email">
+                                            <span>Your Email*</span>
+                                            <input type="email" name="email">
+                                        </div>
+                                        <!-- Contact No -->
+                                        <div class="contact-box contact-no">
+                                            <span>Contact No*</span>
+                                            <input type="text" name="contact_no">
+                                        </div>
+                                        <!-- Address -->
+                                        <div class="contact-box address">
+                                            <span>Address*</span>
+                                            <textarea name="address"></textarea>
+                                        </div>
+                                        <!-- Aadhar Card PDF Upload -->
+                                        <div class="contact-box aadhar-upload">
+                                            <span>Aadhar Card PDF Upload*</span>
+                                            <input type="file" name="aadhar_pdf" accept=".pdf">
+                                        </div>
+                                        <!-- PAN Card PDF Upload -->
+                                        <div class="contact-box pan-upload">
+                                            <span>PAN Card PDF Upload*</span>
+                                            <input type="file" name="pan_pdf" accept=".pdf">
+                                        </div>
+                                    </div>
+                                    <div class="single-contact-form">
+                                        <!-- Salary Slip of 3 Months Upload -->
+                                        <div class="contact-box salary-upload">
+                                            <span>Salary Slip of 3 Months Upload (PDF)*</span>
+                                            <input type="file" name="salary_slip_pdf" accept=".pdf">
+                                        </div>
+                                        <!-- Form 16 Upload -->
+                                        <div class="contact-box form16-upload">
+                                            <span>Form 16 Upload (PDF)*</span>
+                                            <input type="file" name="form16_pdf" accept=".pdf">
+                                        </div>
+                                        <!-- Submit Button -->
+                                        <div class="contact-btn">
+                                            <button type="submit" class="htc__btn btn--theme">SUBMIT NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-output">
+                            <p class="form-messege"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Form -->
+
+    {% endblock body %}
