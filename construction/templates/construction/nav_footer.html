@@ -58,9 +58,7 @@
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                             <div class="header__top__right">
                                 <ul class="login-register">
-                                    <li><a href="/login-register">LOGIN</a></li>
-                                    <li class="separator">/</li>
-                                    <li><a href="/login-register">REGISTER</a></li>
+                                    <li><a href="/admin">LOGIN</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -94,24 +92,24 @@
                                                     <li class="dropp2">
                                                         <a tabindex="-1" href="#">COMPLETED <span style='font-size:20px;'>&#8677;</span></a>
                                                         <ul class="dropdown-menu-dropdown-toggle2">    
-                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                            {% for project in completed_industrial %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                            {% endfor %}
                                                         </ul>
                                                         
                                                     </li>
                                                     <li class="dropp2"><a tabindex="-1" href="#">ONGOING <span style='font-size:20px;'>&#8677;</span></a>
                                                         <ul class="dropdown-menu-dropdown-toggle2">    
-                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                            {% for project in ongoing_industrial %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
                                                         </ul>
                                                     </li>
                                                     <li class="dropp2"><a tabindex="-1" href="#">UPCOMING <span style='font-size:20px;'>&#8677;</span></a>
                                                         <ul class="dropdown-menu-dropdown-toggle2">    
-                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                            {% for project in upcoming_industrial %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -122,24 +120,52 @@
                                                     <li class="dropp2">
                                                         <a tabindex="-1" href="#">COMPLETED <span style='font-size:20px;'>&#8677;</span></a>
                                                         <ul class="dropdown-menu-dropdown-toggle2">    
-                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                            {% for project in completed_residential %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
                                                         </ul>
                                                         
                                                     </li>
                                                     <li class="dropp2"><a tabindex="-1" href="#">ONGOING <span style='font-size:20px;'>&#8677;</span></a>
                                                         <ul class="dropdown-menu-dropdown-toggle2">    
-                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                            {% for project in ongoing_residential %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
                                                         </ul>
                                                     </li>
                                                     <li class="dropp2"><a tabindex="-1" href="#">UPCOMING <span style='font-size:20px;'>&#8677;</span></a>
                                                         <ul class="dropdown-menu-dropdown-toggle2">    
-                                                            <li><a tabindex="-1" href="#">SUB MENU 1</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 2</a></li>
-                                                            <li><a tabindex="-1" href="#">SUB MENU 3</a></li>
+                                                            {% for project in upcoming_residential %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropp">
+                                                <a href="#projects-one.html">Commercial <span style='font-size:20px;'>&#8677;</span></a>
+                                                <ul class="dropdown-menu-dropdown-toggle">
+                                                    <li class="dropp2">
+                                                        <a tabindex="-1" href="#">COMPLETED <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            {% for project in completed_commercial %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
+                                                        </ul>
+                                                        
+                                                    </li>
+                                                    <li class="dropp2"><a tabindex="-1" href="#">ONGOING <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            {% for project in ongoing_commercial %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropp2"><a tabindex="-1" href="#">UPCOMING <span style='font-size:20px;'>&#8677;</span></a>
+                                                        <ul class="dropdown-menu-dropdown-toggle2">    
+                                                            {% for project in upcoming_commercial %}
+                                                            <li><a tabindex="-1" href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                        {% endfor %}
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -165,52 +191,80 @@
                                                     <ul>
                                                         <li><a href="#">COMPLETED</a>
                                                             <ul>
-                                                                <li><a href="#">SUB MENU 1</a></li>
-                                                                <li><a href="#">SUB MENU 2</a></li>
-                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                                {% for project in completed_industrial %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
                                                             </ul>
                                                         </li>
                                                         <li><a href="#">ONGOING</a>
                                                             <ul>
-                                                                <li><a href="#">SUB MENU 1</a></li>
-                                                                <li><a href="#">SUB MENU 2</a></li>
-                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                                {% for project in ongoing_industrial %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
                                                             </ul>
                                                         </li>
                                                         <li><a href="#">UPCOMING</a>
                                                             <ul>
-                                                                <li><a href="#">SUB MENU 1</a></li>
-                                                                <li><a href="#">SUB MENU 2</a></li>
-                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                                {% for project in upcoming_industrial %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
+                                                
                                                 <li><a href="#projects-two.html">RESIDENTIAL</a>
                                                     <ul>
                                                         <li><a href="#">COMPLETED</a>
                                                             <ul>
-                                                                <li><a href="#">SUB MENU 1</a></li>
-                                                                <li><a href="#">SUB MENU 2</a></li>
-                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                                {% for project in completed_residential %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
                                                             </ul>
                                                         </li>
                                                         <li><a href="#">ONGOING</a>
                                                             <ul>
-                                                                <li><a href="#">SUB MENU 1</a></li>
-                                                                <li><a href="#">SUB MENU 2</a></li>
-                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                                {% for project in ongoing_residential %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
                                                             </ul>
                                                         </li>
                                                         <li><a href="#">UPCOMING</a>
                                                             <ul>
-                                                                <li><a href="#">SUB MENU 1</a></li>
-                                                                <li><a href="#">SUB MENU 2</a></li>
-                                                                <li><a href="#">SUB MENU 3</a></li>
+                                                                {% for project in upcoming_residential %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
+                                                
+                                                <li><a href="#projects-two.html">COMMERCIAL</a>
+                                                    <ul>
+                                                        <li><a href="#">COMPLETED</a>
+                                                            <ul>
+                                                                {% for project in completed_commercial %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">ONGOING</a>
+                                                            <ul>
+                                                                {% for project in ongoing_commercial %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">UPCOMING</a>
+                                                            <ul>
+                                                                {% for project in upcoming_commercial %}
+                                                                    <li><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                
                                                 {% comment %} <li><a href="projects-three.html">Upcoming</a></li> {% endcomment %}
                                             </ul>
                                         </li>
