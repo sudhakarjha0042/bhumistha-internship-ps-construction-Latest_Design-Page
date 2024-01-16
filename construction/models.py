@@ -1,4 +1,7 @@
 from django.db import models
+from django.db.models.signals import pre_delete
+from django.dispatch import receiver
+import os
 
 class Specification(models.Model):
     title = models.CharField(max_length=255)
@@ -87,3 +90,25 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return self.name
+
+class LoanDocumentSubmission(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    contact_no = models.CharField(max_length=20)
+    address = models.TextField()
+    aadhar_pdf = models.FileField(upload_to='contact_aadhar_pdfs/')
+    pan_pdf = models.FileField(upload_to='contact_pan_pdfs/')
+    salary_slip_pdf = models.FileField(upload_to='contact_salary_slip_pdfs/')
+    form16_pdf = models.FileField(upload_to='contact_form16_pdfs/')
+
+    def __str__(self):
+        return self.name
+
+@receiver(pre_delete, sender=LoanDocumentSubmission)
+def delete_loan_document_files(sender, instance, **kwargs):
+    # Delete associated files when a LoanDocumentSubmission instance is deleted
+    for field in LoanDocumentSubmission._meta.get_fields():
+        if isinstance(field, models.FileField):
+            file_path = getattr(instance, field.name).path
+            if os.path.exists(file_path):
+                os.remove(file_path)

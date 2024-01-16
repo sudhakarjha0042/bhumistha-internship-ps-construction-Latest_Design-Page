@@ -272,10 +272,11 @@
   position: absolute;
   width: max-content;
   left: 100%;
-  top: 1;
-  padding: 2px;
+  top: 0;
+  padding-left: 2px;
   display: block;
 } 
+
 .dropdown-menu-dropdown-toggle{
    display: none;
    position: relative;
@@ -286,11 +287,57 @@
 }
 
 
+/*----------------------------------
+  DROPDOWN FOR EMI CALCULATOR AND DOCS
+-------------------------------------*/
 
+.main__menu li.dropp3 {
+  position: relative;
+}
 
+.main__menu li.dropp3 ul.dropdown1 {
+  background: #ffffff none repeat scroll 0 0;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 120%;
+  transition: all 0.2s ease-in-out 0s;
+  visibility: hidden;
+  width: 220px;
+  z-index: 999;
+}
 
+.main__menu li.dropp3:hover ul.dropdown1 {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
 
+.main__menu ul.dropdown1 li {
+  border-bottom: 1px solid #f4f4f4;
+  display: block;
+  padding: 0;
+}
 
+.main__menu ul.dropdown1 li a {
+  background: #ffffff none repeat scroll 0 0;
+  color: #1f2d30;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
 
+.main__menu li.dropp3 ul.dropdown1 li:hover > a {
+  background: #fafafa none repeat scroll 0 0;
+  color: #fcc236;
+}
 
 

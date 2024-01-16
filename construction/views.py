@@ -1,6 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Project, ProjectImage, Amenity, Specification, LocationAdvantage
 from .forms import ContactForm
+from django.http import HttpResponse
+from .models import LoanDocumentSubmission
+
 
 def get_filtered_projects():
     projects = Project.objects.all()
@@ -119,3 +122,32 @@ def gallery(request):
 def calc(request):
     context = get_filtered_projects()
     return render(request, 'construction/calc.html', context)
+
+# construction/views.py
+def contact_form_submission(request):
+    if request.method == 'POST':
+        # Process form data
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        contact_no = request.POST.get('contact_no')
+        address = request.POST.get('address')
+        aadhar_pdf = request.FILES.get('aadhar_pdf')
+        pan_pdf = request.FILES.get('pan_pdf')
+        salary_slip_pdf = request.FILES.get('salary_slip_pdf')
+        form16_pdf = request.FILES.get('form16_pdf')
+
+        # Save data to the database
+        submission = LoanDocumentSubmission(
+            name=name,
+            email=email,
+            contact_no=contact_no,
+            address=address,
+            aadhar_pdf=aadhar_pdf,
+            pan_pdf=pan_pdf,
+            salary_slip_pdf=salary_slip_pdf,
+            form16_pdf=form16_pdf
+        )
+        submission.save()
+
+        return render(request, 'construction/success.html')  # Redirect to a success page or customize as needed
+    return render(request, 'construction/doc_upload.html')
