@@ -18,6 +18,7 @@ urlpatterns = [
     path('single-service/', views.single_service, name='single_service'),
     path('project/<int:pk>/', views.project_detail, name='project_detail'),
     path('calc/', views.calc, name='calc'),
+    path('finance/', views.finance, name='finance.html'),
     path('calc2/', views.projects_view, name='projects_view'),
     path('document/', views.contact_form_submission, name='contact_form_submission'),
 ]

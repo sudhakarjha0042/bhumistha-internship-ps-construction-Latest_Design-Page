@@ -123,6 +123,9 @@ def calc(request):
     context = get_filtered_projects()
     return render(request, 'construction/calc.html', context)
 
+def finance(request):
+    return render (request, 'construction/finance.html')    
+
 # construction/views.py
 def contact_form_submission(request):
     if request.method == 'POST':
