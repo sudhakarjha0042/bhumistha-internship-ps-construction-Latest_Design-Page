@@ -1,0 +1,41 @@
+{% extends "construction/nav_footer.html" %}
+{% load static %}
+{% block body %}
+    <!-- End Bradcaump area -->
+    <!-- Start Blog Area -->
+    <section class="htc__blog__area ptb--150 bg__white">
+        <div class="container">
+            <div class="row">
+                <div class="htc__blog__wrap clearfix blog--two">
+                    {% for post in blog_posts %}
+                        <!-- Start Single Blog -->
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="blog foo">
+                                <div class="blog__thumb">
+                                    <a href="{% url 'construction:blog_details' pk=post.pk %}">
+                                        <img src="{{ post.image.url }}" alt="blog image">
+                                    </a>
+                                    <div class="blog__hover__info">
+                                        <ul class="blog__meta">
+                                            <li>By : <a href="#">{{ post.author }}</a></li>
+                                            <li>{{ post.date_published }}</li>
+                                            <!-- Add comments count if you have a comment model -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="blog__details">
+                                    <h2><a href="{% url 'construction:blog_details' pk=post.pk %}">{{ post.title }}</a></h2>
+                                    <div class="blog__btn">
+                                        <a href="{% url 'construction:blog_details' pk=post.pk %}">READ MORE<i class="zmdi zmdi-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Blog -->
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Area -->
+{% endblock body %}

@@ -1,0 +1,77 @@
+{% extends "construction/nav_footer.html" %}
+{% load static %}
+{% block body %}
+<!-- End Bradcaump area -->
+<!-- Start Blog Area -->
+<section class="htc__blog__details__page blog--details ptb--150 bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                <div class="htc__bl__dtl__inner">
+                    <div class="blog__inner">
+                        <div class="blog__thumb">
+                            <a href="/blog-details">
+                                <img src="{{ post.image.url }}" alt="blog image">
+                            </a>
+                            <div class="blog__hover__info">
+                                <ul class="blog__meta">
+                                    <li>By : <a href="#">{{ post.author }}</a></li>
+                                    <li>{{ post.date_published }}</li>
+                                    <li><a href="#">Comments {{ post.comments.count }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="htc__blog__details">
+                            <h2>{{ post.title }}</h2>
+                            <div class="bl__dtl">
+                                {{ post.content | safe }}
+                            </div>
+                            <blockquote>{{ post.quote }}</blockquote>
+                            <div class="bl__dtl">
+                                {{ post.additional_content | safe }}
+                            </div>
+                            <div class="bl__post__share">
+                                <span>Share : </span>
+                                <ul class="bl__post__link">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="pre__next__btn">
+                            <li><a href="#"><i class="fa fa-angle-left"></i>Old Post</a></li>
+                            <li><a href="#">Next Post<i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- Start Blog Comment -->
+                    <div class="htc__comment__area">
+                        <h2 class="title__line--3">COMMENTS</h2>
+                        <div class="htc__comment__inner">
+                            <!-- Insert logic to display comments dynamically -->
+                        </div>
+                    </div>
+                    <!-- End Blog Comment -->
+                    <!-- Start Blog Comment Form -->
+                    <div class="bl__comment__form">
+                        <h2 class="title__line--3">LEAVE A REPLY</h2>
+                        <div class="bl__form__inner">
+                            <!-- Insert logic for comment form -->
+                        </div>
+                        <div class="bl__comnt__btn">
+                            <a class="htc__btn" href="#">SEND NOW</a>
+                        </div>
+                    </div>
+                    <!-- End Blog Comment Form -->
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 smt-40 xmt-40">
+                <!-- Sidebar content -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Blog Area -->
+<!-- Start Newsletter Area -->
+{% endblock body %}

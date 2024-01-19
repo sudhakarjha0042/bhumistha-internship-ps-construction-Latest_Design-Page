@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Project, ProjectImage, Amenity, Specification, LocationAdvantage
+from .models import Project, ProjectImage, Amenity, Specification, LocationAdvantage, BlogPost
 from .forms import ContactForm
 from django.http import HttpResponse
 from .models import LoanDocumentSubmission
@@ -42,11 +42,13 @@ def get_filtered_projects():
 def about(request):
     return render(request, 'construction/about.html')
 
-def blog_details(request):
-    return render(request, 'construction/blog-details.html')
+def blog_details(request, pk):
+    post = get_object_or_404(BlogPost, pk=pk)
+    return render(request, 'construction/blog-details.html', {'post': post})
 
 def blog(request):
-    return render(request, 'construction/blog.html')
+    blog_posts = BlogPost.objects.all()
+    return render(request, 'construction/blog.html', {'blog_posts': blog_posts})
 
 def contact_view(request):
     if request.method == 'POST':
@@ -159,3 +161,4 @@ def contact_form_submission(request):
 def services(request):
     # Your logic for the services view goes here
     return render(request, 'construction/services.html')
+

@@ -112,3 +112,16 @@ def delete_loan_document_files(sender, instance, **kwargs):
             file_path = getattr(instance, field.name).path
             if os.path.exists(file_path):
                 os.remove(file_path)
+
+
+# models.py
+class BlogPost(models.Model):
+    title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='blog_images/')
+    author = models.CharField(max_length=100)
+    date_published = models.DateField()
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title
+

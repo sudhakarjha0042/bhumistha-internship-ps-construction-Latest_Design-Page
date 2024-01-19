@@ -5,8 +5,8 @@ app_name = 'construction'
 
 urlpatterns = [
     path('about/', views.about, name='about'),
-    path('blog-details/', views.blog_details, name='blog_details'),
-    path('blog/', views.blog_details, name='blog'),
+    path('blog-details/<int:pk>/', views.blog_details, name='blog_details'),
+    path('blog/', views.blog, name='blog'),
     path('contact/', views.contact_view, name='contact'),
     path('gallery/', views.gallery, name='gallery'),
     path('', views.index, name='index'),
