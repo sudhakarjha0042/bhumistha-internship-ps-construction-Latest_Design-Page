@@ -154,3 +154,8 @@ def contact_form_submission(request):
 
         return render(request, 'construction/success.html')  # Redirect to a success page or customize as needed
     return render(request, 'construction/doc_upload.html')
+
+
+def services(request):
+    # Your logic for the services view goes here
+    return render(request, 'construction/services.html')

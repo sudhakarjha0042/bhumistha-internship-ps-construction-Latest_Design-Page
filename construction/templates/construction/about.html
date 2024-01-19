@@ -293,28 +293,20 @@
                         <div class="reguest__quote">
                             <div class="section__title text-left">
                                 <h2 class="title__line">REQUEST A <span class="text--theme">QUOTE</span></h2>
-                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasur</p>
+                                <p>Unlock the potential of your vision. Request a quote today and let's turn your ideas into reality.</p>
+                                <p>And for the button below it:</p>
                             </div>
-                            <form id="contact-form" action="https://d29u17ylf1ylz9.cloudfront.net/simply-construction/mail-faq.php" method="post">
+                            
                                 <div class="clint__comment__form">
-                                    <div class="single__cl__form">
-                                        <input name="name" type="text" placeholder="Name">
-                                        <input name="email" type="email" placeholder="Email">
-                                    </div>
-                                    <div class="single__cl__form">
-                                        <input name="telephone" type="tel" placeholder="Phone">
-                                        <input name="subject" type="text" placeholder="Subject">
-                                    </div>
-                                    <div class="single__cl__message">
-                                        <textarea name="message" placeholder="Massage"></textarea>
-                                    </div>
+                                    
+                                    
                                     <div class="clint__submit__btn">
-                                        <button class="submit htc__btn" type="submit">
-                                            SEND MESSAGE 
+                                        <button class="submit htc__btn" onclick="redirectToContact()">
+                                            Contact Us 
                                         </button>
                                     </div>
                                 </div>
-                            </form>
+                            
                             <p class="form-messege"></p>
                         </div>
                     </div>
@@ -407,4 +399,9 @@
             </div>
         </div>
         <!-- End Brand Area -->
+        <script>
+            function redirectToContact() {
+                window.location.href = "{% url 'construction:contact' %}";
+            }
+        </script>
 {% endblock %}

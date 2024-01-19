@@ -82,7 +82,7 @@
                                 <ul class="main__menu">
                                     <li><a href="/">HOME</a></li>
                                     <li><a href="/about">ABOUT</a></li>
-                                    <li><a href="#">SERVICES</a></li>
+                                    <li><a href="{% url 'construction:services' %}">SERVICES</a></li>
                                     <li><a href="/gallery">GALLERY</a></li>
                                     <li class="drop"><a href="#">PROJECT</a>
                                         <ul class="dropdown" aria-labelledby="dropdownMenu1">
@@ -374,7 +374,7 @@
                                 </div>
                                 <div class="footer__link">
                                     <ul class="ft__menu">
-                                        <li><a href="service.html">Services</a></li>
+                                        <li><a href="{% url 'construction:services' %}">Services</a></li>
                                         <li><a href="projects-one.html">Projects</a></li>
                                         
                                         <li><a href="blog.html">blog</a></li>
@@ -413,17 +413,12 @@
                                     <h2 class="ft__title">INQUARY</h2>
                                     <div class="footer__link">
                                         <ul class="ft__menu">
-                                            <li><a href="#">Construction</a></li>
-                                            <li><a href="#">Architecture</a></li>
-                                            <li><a href="#">Plambing</a></li>
-                                            <li><a href="#">Plambing</a></li>
+                                            <li><a href="{% url 'construction:contact' %}">Construction</a></li>
+                                            <li><a href="{% url 'construction:contact' %}">Architecture</a></li>
+                                            
+                                            <li><a href="{% url 'construction:contact' %}">Renovation</a></li>
                                         </ul>
-                                        <ul class="ft__menu">
-                                            <li><a href="#">Painting</a></li>
-                                            <li><a href="#">Roofing</a></li>
-                                            <li><a href="#">Plambing</a></li>
-                                            <li><a href="#">Features</a></li>
-                                        </ul>
+                    
                                     </div>
                                 </div>
                             </div>
