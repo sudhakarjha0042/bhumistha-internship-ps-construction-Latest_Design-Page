@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Project, ProjectImage, Amenity, Specification, LocationAdvantage, BlogPost
 from .forms import ContactForm
+from .forms import CommentForm,CommentForm
+
 from django.http import HttpResponse
 from .models import LoanDocumentSubmission
 
@@ -44,7 +46,19 @@ def about(request):
 
 def blog_details(request, pk):
     post = get_object_or_404(BlogPost, pk=pk)
-    return render(request, 'construction/blog-details.html', {'post': post})
+    
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return render(request, 'construction/blog-details.html', {'post': post, 'form': form})
+    else:
+        form = CommentForm()
+
+    return render(request, 'construction/blog-details.html', {'post': post, 'form': form})
+
 
 def blog(request):
     blog_posts = BlogPost.objects.all()

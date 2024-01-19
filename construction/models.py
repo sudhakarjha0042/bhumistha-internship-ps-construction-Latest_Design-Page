@@ -122,6 +122,21 @@ class BlogPost(models.Model):
     date_published = models.DateField()
     content = models.TextField()
 
+    def formatted_content(self):
+        # Replace '&' with <strong> for bold and '$' with <br> for new lines
+        formatted_text = self.content.replace('&', '<strong>').replace('$', '<br>').replace('!', '</strong>')
+        return formatted_text
+
     def __str__(self):
         return self.title
 
+class Comment(models.Model):
+    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Comment by {self.name} on {self.post.title}"
