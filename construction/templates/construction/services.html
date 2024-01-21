@@ -121,7 +121,7 @@
         </section>
         <!-- End Service Area -->
         <!-- Start Testimonial Area -->
-        <section class="htc__testimonial__area ptb--130 bg__white">
+        <section class="htc__testimonial__area ptb--130" data--gray__overlay="9.5" style="background: rgba(0, 0, 0, 0) url('/static/construction/images/bg/1.jpg') no-repeat fixed center center / cover ;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12">
@@ -134,45 +134,45 @@
                                  <!-- Start Single Testimonial -->
                                 <div class="testimonial">
                                     <div class="testimonial__thumb">
-                                         <img src="{% static 'construction/images/test/client/1.jpg'%}" alt="clint image">
+                                         <img src="{% static 'construction/images/test/client/1.jpg' %}" alt="clint image">
                                     </div>
                                     <div class="testimonial__details">
                                         <div class="tes__icon">
                                             <i class="fa fa-quote-right"></i>
                                         </div>
                                         <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, Alves</h4>
+                                        <h2><a href="#">Person Name</a></h2>
+                                        <h4>CEO</h4>
                                     </div>
                                 </div>
                                  <!-- End Single Testimonial -->
                                  <!-- Start Single Testimonial -->
                                 <div class="testimonial">
                                     <div class="testimonial__thumb">
-                                         <img src="{% static 'construction/images/test/client/1.jpg'%}" alt="clint image">
+                                         <img src="{% static 'construction/images/test/client/1.jpg' %}" alt="clint image">
                                     </div>
                                     <div class="testimonial__details">
                                         <div class="tes__icon">
                                             <i class="fa fa-quote-right"></i>
                                         </div>
                                         <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, Alves</h4>
+                                        <h2><a href="#">Person Name</a></h2>
+                                        <h4>CEO</h4>
                                     </div>
                                 </div>
                                  <!-- End Single Testimonial -->
                                  <!-- Start Single Testimonial -->
                                 <div class="testimonial">
                                     <div class="testimonial__thumb">
-                                         <img src="{% static 'construction/images/test/client/1.jpg'%}" alt="clint image">
+                                         <img src="{% static 'construction/images/test/client/1.jpg' %}" alt="clint image">
                                     </div>
                                     <div class="testimonial__details">
                                         <div class="tes__icon">
                                             <i class="fa fa-quote-right"></i>
                                         </div>
                                         <p>On the other hand, we denounce with righteous indignation and the tdislike men who are beguiled </p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, Alves</h4>
+                                        <h2><a href="#">Person Name</a></h2>
+                                        <h4>CEO</h4>
                                     </div>
                                 </div>
                                  <!-- End Single Testimonial -->
@@ -183,20 +183,33 @@
                         <div class="reguest__quote">
                             <div class="section__title text-left">
                                 <h2 class="title__line">REQUEST A <span class="text--theme">QUOTE</span></h2>
-                                <p>Unlock the potential of your vision. Request a quote today and let's turn your ideas into reality.</p>
-                                <p>And for the button below it:</p>
+                                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasur</p>
                             </div>
-                            
+                            <form id="contact-form" method="post">
+                                {% csrf_token %}
                                 <div class="clint__comment__form">
-                                    
-                                    
+                                    <div class="single__cl__form">
+                                        <input name="name" type="text" placeholder="Name">
+                                        <input name="email" type="email" placeholder="Email">
+                                    </div>
+                                    <div class="single__cl__message">
+                                        <textarea name="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="single__cl__form" style="margin: 0 0rem;margin-bottom: 7px;">
+                                        <select name="category" class="form-select">
+                                            <option value="" selected disabled>Select Category</option>
+                                            <option value="Residential">Residential</option>
+                                            <option value="Industrial">Industrial</option>
+                                            <option value="Commercial">Commercial</option>
+                                        </select>
+                                    </div>
                                     <div class="clint__submit__btn">
-                                        <button class="submit htc__btn" onclick="redirectToContact()">
-                                            Contact Us 
+                                        <button class="submit htc__btn" type="submit">
+                                            SEND MESSAGE 
                                         </button>
                                     </div>
                                 </div>
-                            
+                            </form>
                             <p class="form-messege"></p>
                         </div>
                     </div>

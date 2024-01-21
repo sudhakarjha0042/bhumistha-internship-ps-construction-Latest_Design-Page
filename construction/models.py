@@ -52,12 +52,19 @@ class Project(models.Model):
         ('Industrial', 'Industrial'),
         ('Commercial', 'Commercial'),
     ])
+
+    def get_first_image_url(self):
+        first_image = self.projectimage_set.first()
+        if first_image:
+            return first_image.image.url
+
     def get_description_list(self):
         # Split the description into sentences based on periods
         return [sentence.strip() for sentence in self.description.split('.') if sentence]
 
     def __str__(self):
         return f'{self.title} - {self.get_status_display()}- {self.category}'
+
 
     
 

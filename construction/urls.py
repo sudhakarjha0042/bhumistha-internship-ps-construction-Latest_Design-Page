@@ -22,4 +22,5 @@ urlpatterns = [
     path('calc2/', views.projects_view, name='projects_view'),
     path('document/', views.contact_form_submission, name='contact_form_submission'),
     path('services/', views.services, name='services'),
+    path('quote/',views.quote,name='quote')
 ]

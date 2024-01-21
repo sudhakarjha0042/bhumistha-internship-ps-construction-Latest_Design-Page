@@ -1,0 +1,44 @@
+{% extends "construction/nav_footer.html" %}
+{% load static %}
+{% block body %}
+<section class="htc__testimonial__area ptb--130" data--gray__overlay="9.5" style="background: rgba(0, 0, 0, 0) url('/static/construction/images/bg/1.jpg') no-repeat fixed center center / cover ;">
+    <div class="container">
+            <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
+                <div class="reguest__quote">
+                    <div class="section__title text-left">
+                        <h2 class="title__line">REQUEST A <span class="text--theme">QUOTE</span></h2>
+                        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasur</p>
+                    </div>
+                    <form id="contact-form" method="post">
+                        {% csrf_token %}
+                        <div class="clint__comment__form">
+                            <div class="single__cl__form">
+                                <input name="name" type="text" placeholder="Name">
+                                <input name="email" type="email" placeholder="Email">
+                            </div>
+                            <div class="single__cl__message">
+                                <textarea name="message" placeholder="Message"></textarea>
+                            </div>
+                            <div class="single__cl__form">
+                                <select name="category" class="form-select">
+                                    <option value="" selected disabled>Select Category</option>
+                                    <option value="Residential">Residential</option>
+                                    <option value="Industrial">Industrial</option>
+                                    <option value="Commercial">Commercial</option>
+                                </select>
+                            </div>
+                            <div class="clint__submit__btn">
+                                <button class="submit htc__btn" type="submit">
+                                    SEND MESSAGE 
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="form-messege"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

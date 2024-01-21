@@ -5,9 +5,15 @@ from .forms import CommentForm,CommentForm
 
 from django.http import HttpResponse
 from .models import LoanDocumentSubmission
+from django.db.models import Q
 
 
 def get_filtered_projects():
+        # Query latest projects
+    latest_projects = Project.objects.filter(
+        Q(status='completed') | Q(status='ongoing') | Q(status='upcoming')
+    ).order_by('-id')[:5]  # Assuming you want to get the latest 5 projects
+
     projects = Project.objects.all()
 
     completed_residential = projects.filter(status='Completed', category='Residential')
@@ -38,13 +44,28 @@ def get_filtered_projects():
         'upcoming_commercial': upcoming_commercial,
         'projects': projects,
         'project_images': project_images,
-
+        'latest_projects':latest_projects,
     }
 
 def about(request):
-    return render(request, 'construction/about.html')
+    context = get_filtered_projects()
+    return render(request, 'construction/about.html',context)
+
+def quote(request):
+    context = get_filtered_projects()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'construction/success.html')
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'construction/quote.html', {'form': form,'context':context})
 
 def blog_details(request, pk):
+    context = get_filtered_projects()
     post = get_object_or_404(BlogPost, pk=pk)
     
     if request.method == 'POST':
@@ -57,12 +78,13 @@ def blog_details(request, pk):
     else:
         form = CommentForm()
 
-    return render(request, 'construction/blog-details.html', {'post': post, 'form': form})
+    return render(request, 'construction/blog-details.html', {'post': post, 'form': form,'context':context})
 
 
 def blog(request):
     blog_posts = BlogPost.objects.all()
-    return render(request, 'construction/blog.html', {'blog_posts': blog_posts})
+    context = get_filtered_projects()
+    return render(request, 'construction/blog.html', {'blog_posts': blog_posts,'context':context})
 
 def contact_view(request):
     if request.method == 'POST':
@@ -79,6 +101,14 @@ def contact_view(request):
 
 def index(request):
     context = get_filtered_projects()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'construction/success.html',{'form': form,'context':context})
+
+    else:
+        form = ContactForm()
     return render(request, 'construction/index.html', context)
 
 def login_register(request):
@@ -118,21 +148,19 @@ def projects_two(request):
     return render(request, 'construction/projects-two.html')
 
 def service(request):
-    return render(request, 'construction/service.html')
+    context = get_filtered_projects()
+    return render(request, 'construction/service.html',context)
 
 def single_project(request):
     context = get_filtered_projects()
     return render(request, 'construction/single-project.html', context)
 
 def single_service(request):
-    return render(request, 'construction/single-service.html')
+    context = get_filtered_projects()
+    return render(request, 'construction/single-service.html',context)
 
 def gallery(request):
     context = get_filtered_projects()
-    projects = Project.objects.all()
-    project_images = ProjectImage.objects.all()
-            # Query all projects
-    projects = Project.objects.all()
     return render(request, 'construction/gallery.html',context)
 
 def calc(request):
@@ -140,7 +168,8 @@ def calc(request):
     return render(request, 'construction/calc.html', context)
 
 def finance(request):
-    return render (request, 'construction/finance.html')    
+    context = get_filtered_projects()
+    return render (request, 'construction/finance.html',context)    
 
 # construction/views.py
 def contact_form_submission(request):
@@ -174,5 +203,6 @@ def contact_form_submission(request):
 
 def services(request):
     # Your logic for the services view goes here
-    return render(request, 'construction/services.html')
+    context = get_filtered_projects()
+    return render(request, 'construction/services.html',context)
 

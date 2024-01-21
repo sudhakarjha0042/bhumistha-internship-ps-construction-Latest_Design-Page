@@ -270,108 +270,47 @@
             </div>
         </section>
         <!-- End About Area -->
-        <!-- Start Latest Project Area -->
-        <section class="htc__latest__project__area ptb--150 bg__white text__pos">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="section__title text-center">
-                            <h2 class="title__line">LATEST <span class="text--theme">PROJECTS</span></h2>
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</p>
-                        </div>
-                    </div>
+ <!-- Start Latest Project Area -->
+<section class="htc__latest__project__area ptb--150 bg__white text__pos">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section__title text-center">
+                    <h2 class="title__line">LATEST <span class="text--theme">PROJECTS</span></h2>
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</p>
                 </div>
-                <div class="row">
-                    <div class="htc__latest__project__wrap h1__project clearfix mt--30">
-                        <!-- Start Single Project -->
-                        <div class="col-md-5 col-lg-5 hidden-sm col-xs-12">
-                            <div class="project__itm foo">
-                                <div class="project__thumb">
-                                    <a href="/single-project">
-                                        <img src="{% static 'construction/images/lst-project-3/1.jpg' %}" alt="project images">
-                                    </a>
-                                    <div class="project__hover__info">
-                                        <div class="project__action">
-                                            <h2><a href="/single-project">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Project -->
-                        <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="">
-                                                <img src="{% static 'construction/images/lst-project-3/2.jpg' %}" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="">
-                                                <img src="{% static 'construction/images/lst-project-3/3.jpg' %}" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="">
-                                                <img src="{% static 'construction/images/lst-project-3/4.jpg' %}" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="project__itm foo">
-                                        <div class="project__thumb">
-                                            <a href="">
-                                                <img src="{% static 'construction/images/lst-project-3/5.jpg' %}" alt="project images">
-                                            </a>
-                                            <div class="project__hover__info">
-                                                <div class="project__action">
-                                                    <h2><a href="">CONSTRUCTION</a></h2>
-                                                    <h4>DURATION : 6 MONTH</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="htc__latest__project__wrap h1__project clearfix mt--30">
+                <!-- Loop through latest projects -->
+                {% for project in latest_projects %}
+                    <!-- Start Single Project -->
+                    <div class="col-md-5 col-lg-5 hidden-sm col-xs-12">
+                        <div class="project__itm foo">
+                            <div class="project__thumb">
+                                <a href="{% url 'construction:project_detail' pk=project.id %}">
+                                    <img src="{{ project.get_first_image_url }}" alt="{{ project.title }}">
+                                </a>
+                                <div class="project__hover__info">
+                                    <div class="project__action">
+                                        <h2><a href="{% url 'construction:project_detail' pk=project.id %}">{{ project.title }}</a></h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <!-- End Single Project -->
+                {% endfor %}
+                <!-- End Loop -->
             </div>
-            <div class="text__shape">
-                <h2>PROJECTS</h2>
-            </div>
-        </section>
-        <!-- End Latest Project Area -->
+        </div>
+    </div>
+    <div class="text__shape">
+        <h2 style="color: rgb(237, 221, 202);">PROJECTS</h2>
+    </div>
+</section>
+<!-- End Latest Project Area -->
           <!-- Start Counter Up Area -->
           <section class="htc__counterup__area count--2 h1__countdown bg__gray">
             <div class="container-fluid">
@@ -386,7 +325,7 @@
                             <h2># OUR <span class="text--theme">CONSTRUCTION</span> EXPERIENCE</h2>
                             <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble</p>
                             <div class="htc__call__btn">
-                                <a class="htc__btn" href="#">CONTACT US</a>
+                                <a class="htc__btn" href="/contact">CONTACT US</a>
                             </div>
                         </div>
                         <div class="htc__counterup__wrap" style="background: rgba(0, 0, 0, 0) url('/static/construction/images/bg/10.png') no-repeat scroll center center / cover ;">
@@ -673,94 +612,6 @@
             </div>
         </div>
     </section>
-    <!-- End Testimonial Area -->
-        <!-- Start Blog Area -->
-        <section class="htc__blog__area pt--150 bg__white">
-            <div class="container">
-                <div class="row">
-                    <div class="section__title text-center">
-                        <h2 class="title__line">LATEST <span class="text--theme">BLOG</span></h2>
-                        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="htc__blog__wrap mt--30 clearfix">
-                        <!-- Start Single Blog -->
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                            <div class="blog foo">
-                                <div class="blog__thumb">
-                                    <a href="/blog-details">
-                                        <img src="{% static 'construction/images/blog/blog-img/1.jpg' %}" alt="blog image">
-                                    </a>
-                                    <div class="blog__hover__info">
-                                        <ul class="blog__meta">
-                                            <li>By : <a href="#">Kalvin</a></li>
-                                            <li>20 July</li>
-                                            <li><a href="#">Comments 5</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="blog__details">
-                                    <h2><a href="/blog-details">Lorem ipsum dolor sit amet, cotur adipiscing elit, sed do eiusmod </a></h2>
-                                    <div class="blog__btn">
-                                        <a href="/blog-details">READ MORE<i class="zmdi zmdi-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Blog -->
-                        <!-- Start Single Blog -->
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                            <div class="blog foo">
-                                <div class="blog__thumb">
-                                    <a href="/blog-details">
-                                        <img src="{% static 'construction/images/blog/blog-img/2.jpg' %}" alt="blog image">
-                                    </a>
-                                    <div class="blog__hover__info">
-                                        <ul class="blog__meta">
-                                            <li>By : <a href="#">Kalvin</a></li>
-                                            <li>20 July</li>
-                                            <li><a href="#">Comments 5</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="blog__details">
-                                    <h2><a href="/blog-details">Lorem ipsum dolor sit amet, cotur adipiscing elit, sed do eiusmod </a></h2>
-                                    <div class="blog__btn">
-                                        <a href="/blog-details">READ MORE<i class="zmdi zmdi-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Blog -->
-                        <!-- Start Single Blog -->
-                        <div class="col-md-4 col-lg-4 hidden-sm col-xs-12">
-                            <div class="blog foo">
-                                <div class="blog__thumb">
-                                    <a href="/blog-details">
-                                        <img src="{% static 'construction/images/blog/blog-img/3.jpg' %}" alt="blog image">
-                                    </a>
-                                    <div class="blog__hover__info">
-                                        <ul class="blog__meta">
-                                            <li>By : <a href="#">Kalvin</a></li>
-                                            <li>20 July</li>
-                                            <li><a href="#">Comments 5</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="blog__details">
-                                    <h2><a href="/blog-details">Lorem ipsum dolor sit amet, cotur adipiscing elit, sed do eiusmod </a></h2>
-                                    <div class="blog__btn">
-                                        <a href="/blog-details">READ MORE<i class="zmdi zmdi-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Blog -->
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- End Blog Area -->
         <!-- Start Blog Area -->
         <div class="htc__brand__area">
